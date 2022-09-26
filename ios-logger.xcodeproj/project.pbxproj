@@ -23,6 +23,14 @@
 		3C0F80CE28E16D5F00753CB1 /* DataPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80CD28E16D5F00753CB1 /* DataPage.swift */; };
 		3C0F80D128E16DB800753CB1 /* LabelsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80D028E16DB800753CB1 /* LabelsPage.swift */; };
 		3C0F80D328E16E2200753CB1 /* RecordingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80D228E16E2200753CB1 /* RecordingPage.swift */; };
+		3C0F80D528E17D7900753CB1 /* Altimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80D428E17D7900753CB1 /* Altimeter.swift */; };
+		3C0F80D728E17DA500753CB1 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80D628E17DA500753CB1 /* LogManager.swift */; };
+		3C0F80D928E17DD000753CB1 /* DateTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80D828E17DD000753CB1 /* DateTimeManager.swift */; };
+		3C0F80DB28E17DFA00753CB1 /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80DA28E17DFA00753CB1 /* RecordManager.swift */; };
+		3C0F80DD28E17E1900753CB1 /* ScreenBrightnessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80DC28E17E1900753CB1 /* ScreenBrightnessManager.swift */; };
+		3C0F80DF28E17E8C00753CB1 /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80DE28E17E8C00753CB1 /* FileView.swift */; };
+		3C0F80E128E17EB100753CB1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80E028E17EB100753CB1 /* FileManager.swift */; };
+		3C0F80E328E17EE200753CB1 /* UIActivityModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */; };
 		3C35BD5728E00980001795A1 /* TitleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35BD5628E00980001795A1 /* TitleAtom.swift */; };
 		3C8BA6D928D6678400ADE7DB /* ios_loggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */; };
 		3C8BA6DB28D6678400ADE7DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6DA28D6678400ADE7DB /* ContentView.swift */; };
@@ -69,6 +77,14 @@
 		3C0F80CD28E16D5F00753CB1 /* DataPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPage.swift; sourceTree = "<group>"; };
 		3C0F80D028E16DB800753CB1 /* LabelsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsPage.swift; sourceTree = "<group>"; };
 		3C0F80D228E16E2200753CB1 /* RecordingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPage.swift; sourceTree = "<group>"; };
+		3C0F80D428E17D7900753CB1 /* Altimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Altimeter.swift; sourceTree = "<group>"; };
+		3C0F80D628E17DA500753CB1 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		3C0F80D828E17DD000753CB1 /* DateTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeManager.swift; sourceTree = "<group>"; };
+		3C0F80DA28E17DFA00753CB1 /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
+		3C0F80DC28E17E1900753CB1 /* ScreenBrightnessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessManager.swift; sourceTree = "<group>"; };
+		3C0F80DE28E17E8C00753CB1 /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
+		3C0F80E028E17EB100753CB1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityModal.swift; sourceTree = "<group>"; };
 		3C35BD5628E00980001795A1 /* TitleAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAtom.swift; sourceTree = "<group>"; };
 		3C8BA6D528D6678400ADE7DB /* ios-logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_loggerApp.swift; sourceTree = "<group>"; };
@@ -128,6 +144,11 @@
 		3C35BD4828E001CC001795A1 /* Cores */ = {
 			isa = PBXGroup;
 			children = (
+				3C0F80D428E17D7900753CB1 /* Altimeter.swift */,
+				3C0F80D628E17DA500753CB1 /* LogManager.swift */,
+				3C0F80D828E17DD000753CB1 /* DateTimeManager.swift */,
+				3C0F80DA28E17DFA00753CB1 /* RecordManager.swift */,
+				3C0F80DC28E17E1900753CB1 /* ScreenBrightnessManager.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -143,6 +164,8 @@
 		3C35BD4B28E00227001795A1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3C0F80E028E17EB100753CB1 /* FileManager.swift */,
+				3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,6 +185,7 @@
 		3C35BD4D28E00296001795A1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3C0F80DE28E17E8C00753CB1 /* FileView.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -419,7 +443,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0F80B628E1303D00753CB1 /* SensorItemModel.swift in Sources */,
+				3C0F80D728E17DA500753CB1 /* LogManager.swift in Sources */,
 				3C8BA6E228D6678500ADE7DB /* Persistence.swift in Sources */,
+				3C0F80E128E17EB100753CB1 /* FileManager.swift in Sources */,
 				3C0F80BC28E1352700753CB1 /* NavigationButtonAtom.swift in Sources */,
 				3C0F80CA28E16C9100753CB1 /* ReadyPage.swift in Sources */,
 				3C0F80BA28E134B300753CB1 /* PickerAtom.swift in Sources */,
@@ -432,12 +458,18 @@
 				3C0F80C228E1389C00753CB1 /* LoggerItemMolecule.swift in Sources */,
 				3C0F80C828E16AF800753CB1 /* LoggerTemplate.swift in Sources */,
 				3C0F80BE28E1366100753CB1 /* LoggerPage.swift in Sources */,
+				3C0F80DF28E17E8C00753CB1 /* FileView.swift in Sources */,
 				3C0F80C428E155D400753CB1 /* LoggerListOrganism.swift in Sources */,
+				3C0F80D928E17DD000753CB1 /* DateTimeManager.swift in Sources */,
 				3C0F80D128E16DB800753CB1 /* LabelsPage.swift in Sources */,
+				3C0F80DD28E17E1900753CB1 /* ScreenBrightnessManager.swift in Sources */,
 				3C0F80CE28E16D5F00753CB1 /* DataPage.swift in Sources */,
+				3C0F80E328E17EE200753CB1 /* UIActivityModal.swift in Sources */,
 				3C8BA6D928D6678400ADE7DB /* ios_loggerApp.swift in Sources */,
 				3C0F80B428E12FCB00753CB1 /* ToggleAtom.swift in Sources */,
+				3C0F80D528E17D7900753CB1 /* Altimeter.swift in Sources */,
 				3C35BD5728E00980001795A1 /* TitleAtom.swift in Sources */,
+				3C0F80DB28E17DFA00753CB1 /* RecordManager.swift in Sources */,
 				3C0F80D328E16E2200753CB1 /* RecordingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
