@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct LoggerTemplate: View {
-    var isActive: Bool = false
-    var title: String = "Sensor Logs"
+    var isActive: Bool = true
+    var title: String = "Logger"
     var height: CGFloat = 2.0
     var bar_color: Color = .gray
 
@@ -16,14 +16,11 @@ struct LoggerTemplate: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             Spacer()
-//            NavigationButtonView(
-//                isActive: isActive, content: ReadyView()
-//            )
-//            NavigationButtonView(
-//                content: ReadyView()
-//            )
+            NavigationButtonAtom(
+                isActive: isActive, content: ReadyPage()
+            )
             Spacer()
-        }
+            }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

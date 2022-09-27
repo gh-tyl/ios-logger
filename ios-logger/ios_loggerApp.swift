@@ -1,10 +1,3 @@
-//
-//  ios_loggerApp.swift
-//  ios-logger
-//
-//  Created by Tyler Inari on 2022-09-17.
-//
-
 import SwiftUI
 
 @main

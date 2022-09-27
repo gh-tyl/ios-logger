@@ -13,6 +13,7 @@ struct LoggerPage: View {
             NavigationStack {
                 LoggerTemplate()
             }
+            .navigationTitle("Logger")
         }
 }
 
