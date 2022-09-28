@@ -16,7 +16,7 @@ struct LoggerTemplate: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             Spacer()
-            NavigationButtonAtom(
+            ButtonNavigationAtom(
                 isActive: isActive, content: ReadyPage()
             )
             Spacer()

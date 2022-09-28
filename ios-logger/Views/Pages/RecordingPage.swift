@@ -5,7 +5,7 @@ struct RecordingPage: View {
     var isActive: Bool = false
     var body: some View {
         VStack {
-            NavigationButtonAtom(isActive: isActive, content: LoggerPage())
+//            ButtonNavigationAtom(isActive: isActive, content: LoggerPage())
         }
         .navigationBarBackButtonHidden(isNavigationBarBackButtonHidden)
     }

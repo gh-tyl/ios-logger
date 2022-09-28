@@ -8,7 +8,7 @@ struct PickerSetMolecule: View {
     var body: some View {
         VStack {
             TitleAtom(title: title, height: height, bar_color: bar_color)
-            PickerAtom()
+            PickerWheelAtom()
         }
     }
 }

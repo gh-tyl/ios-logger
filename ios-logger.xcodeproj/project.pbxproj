@@ -10,8 +10,8 @@
 		3C0F80B428E12FCB00753CB1 /* ToggleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B328E12FCB00753CB1 /* ToggleAtom.swift */; };
 		3C0F80B628E1303D00753CB1 /* SensorItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B528E1303D00753CB1 /* SensorItemModel.swift */; };
 		3C0F80B828E1339F00753CB1 /* ItemAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B728E1339F00753CB1 /* ItemAtom.swift */; };
-		3C0F80BA28E134B300753CB1 /* PickerAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B928E134B300753CB1 /* PickerAtom.swift */; };
-		3C0F80BC28E1352700753CB1 /* NavigationButtonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BB28E1352700753CB1 /* NavigationButtonAtom.swift */; };
+		3C0F80BA28E134B300753CB1 /* PickerWheelAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B928E134B300753CB1 /* PickerWheelAtom.swift */; };
+		3C0F80BC28E1352700753CB1 /* ButtonNavigationAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BB28E1352700753CB1 /* ButtonNavigationAtom.swift */; };
 		3C0F80BE28E1366100753CB1 /* LoggerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BD28E1366100753CB1 /* LoggerPage.swift */; };
 		3C0F80C028E1383400753CB1 /* PickerSetMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BF28E1383400753CB1 /* PickerSetMolecule.swift */; };
 		3C0F80C228E1389C00753CB1 /* LoggerItemMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C128E1389C00753CB1 /* LoggerItemMolecule.swift */; };
@@ -32,6 +32,14 @@
 		3C0F80E128E17EB100753CB1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80E028E17EB100753CB1 /* FileManager.swift */; };
 		3C0F80E328E17EE200753CB1 /* UIActivityModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */; };
 		3C35BD5728E00980001795A1 /* TitleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35BD5628E00980001795A1 /* TitleAtom.swift */; };
+		3C6B414428E4C85600CBCE9A /* ButtonAtoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414328E4C85600CBCE9A /* ButtonAtoms.swift */; };
+		3C6B414728E4CEA600CBCE9A /* LabelSmallAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414628E4CEA600CBCE9A /* LabelSmallAtom.swift */; };
+		3C6B414928E4CFD100CBCE9A /* ButtonExecAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414828E4CFD100CBCE9A /* ButtonExecAtom.swift */; };
+		3C6B414B28E4D04800CBCE9A /* TitleH2Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414A28E4D04800CBCE9A /* TitleH2Atom.swift */; };
+		3C6B414D28E4DD2500CBCE9A /* LabelTimeAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414C28E4DD2500CBCE9A /* LabelTimeAtom.swift */; };
+		3C6B414F28E4E03900CBCE9A /* InputTextAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414E28E4E03900CBCE9A /* InputTextAtom.swift */; };
+		3C6B415128E4E08900CBCE9A /* LabelMiddleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B415028E4E08900CBCE9A /* LabelMiddleAtom.swift */; };
+		3C6B415328E4E11400CBCE9A /* ButtonSmallAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B415228E4E11400CBCE9A /* ButtonSmallAtom.swift */; };
 		3C8BA6D928D6678400ADE7DB /* ios_loggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */; };
 		3C8BA6DB28D6678400ADE7DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6DA28D6678400ADE7DB /* ContentView.swift */; };
 		3C8BA6DD28D6678500ADE7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BA6DC28D6678500ADE7DB /* Assets.xcassets */; };
@@ -64,8 +72,8 @@
 		3C0F80B328E12FCB00753CB1 /* ToggleAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAtom.swift; sourceTree = "<group>"; };
 		3C0F80B528E1303D00753CB1 /* SensorItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemModel.swift; sourceTree = "<group>"; };
 		3C0F80B728E1339F00753CB1 /* ItemAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAtom.swift; sourceTree = "<group>"; };
-		3C0F80B928E134B300753CB1 /* PickerAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerAtom.swift; sourceTree = "<group>"; };
-		3C0F80BB28E1352700753CB1 /* NavigationButtonAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonAtom.swift; sourceTree = "<group>"; };
+		3C0F80B928E134B300753CB1 /* PickerWheelAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWheelAtom.swift; sourceTree = "<group>"; };
+		3C0F80BB28E1352700753CB1 /* ButtonNavigationAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNavigationAtom.swift; sourceTree = "<group>"; };
 		3C0F80BD28E1366100753CB1 /* LoggerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPage.swift; sourceTree = "<group>"; };
 		3C0F80BF28E1383400753CB1 /* PickerSetMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerSetMolecule.swift; sourceTree = "<group>"; };
 		3C0F80C128E1389C00753CB1 /* LoggerItemMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerItemMolecule.swift; sourceTree = "<group>"; };
@@ -86,6 +94,14 @@
 		3C0F80E028E17EB100753CB1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityModal.swift; sourceTree = "<group>"; };
 		3C35BD5628E00980001795A1 /* TitleAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAtom.swift; sourceTree = "<group>"; };
+		3C6B414328E4C85600CBCE9A /* ButtonAtoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAtoms.swift; sourceTree = "<group>"; };
+		3C6B414628E4CEA600CBCE9A /* LabelSmallAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSmallAtom.swift; sourceTree = "<group>"; };
+		3C6B414828E4CFD100CBCE9A /* ButtonExecAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExecAtom.swift; sourceTree = "<group>"; };
+		3C6B414A28E4D04800CBCE9A /* TitleH2Atom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleH2Atom.swift; sourceTree = "<group>"; };
+		3C6B414C28E4DD2500CBCE9A /* LabelTimeAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTimeAtom.swift; sourceTree = "<group>"; };
+		3C6B414E28E4E03900CBCE9A /* InputTextAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextAtom.swift; sourceTree = "<group>"; };
+		3C6B415028E4E08900CBCE9A /* LabelMiddleAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelMiddleAtom.swift; sourceTree = "<group>"; };
+		3C6B415228E4E11400CBCE9A /* ButtonSmallAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSmallAtom.swift; sourceTree = "<group>"; };
 		3C8BA6D528D6678400ADE7DB /* ios-logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_loggerApp.swift; sourceTree = "<group>"; };
 		3C8BA6DA28D6678400ADE7DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -174,10 +190,18 @@
 			isa = PBXGroup;
 			children = (
 				3C35BD5628E00980001795A1 /* TitleAtom.swift */,
+				3C6B414A28E4D04800CBCE9A /* TitleH2Atom.swift */,
 				3C0F80B728E1339F00753CB1 /* ItemAtom.swift */,
+				3C6B414628E4CEA600CBCE9A /* LabelSmallAtom.swift */,
+				3C6B415028E4E08900CBCE9A /* LabelMiddleAtom.swift */,
+				3C6B414C28E4DD2500CBCE9A /* LabelTimeAtom.swift */,
 				3C0F80B328E12FCB00753CB1 /* ToggleAtom.swift */,
-				3C0F80BB28E1352700753CB1 /* NavigationButtonAtom.swift */,
-				3C0F80B928E134B300753CB1 /* PickerAtom.swift */,
+				3C0F80BB28E1352700753CB1 /* ButtonNavigationAtom.swift */,
+				3C6B414828E4CFD100CBCE9A /* ButtonExecAtom.swift */,
+				3C6B415228E4E11400CBCE9A /* ButtonSmallAtom.swift */,
+				3C6B414328E4C85600CBCE9A /* ButtonAtoms.swift */,
+				3C0F80B928E134B300753CB1 /* PickerWheelAtom.swift */,
+				3C6B414E28E4E03900CBCE9A /* InputTextAtom.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -443,15 +467,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0F80B628E1303D00753CB1 /* SensorItemModel.swift in Sources */,
+				3C6B414928E4CFD100CBCE9A /* ButtonExecAtom.swift in Sources */,
 				3C0F80D728E17DA500753CB1 /* LogManager.swift in Sources */,
 				3C8BA6E228D6678500ADE7DB /* Persistence.swift in Sources */,
+				3C6B414F28E4E03900CBCE9A /* InputTextAtom.swift in Sources */,
+				3C6B414D28E4DD2500CBCE9A /* LabelTimeAtom.swift in Sources */,
 				3C0F80E128E17EB100753CB1 /* FileManager.swift in Sources */,
-				3C0F80BC28E1352700753CB1 /* NavigationButtonAtom.swift in Sources */,
+				3C6B414428E4C85600CBCE9A /* ButtonAtoms.swift in Sources */,
+				3C6B414B28E4D04800CBCE9A /* TitleH2Atom.swift in Sources */,
+				3C0F80BC28E1352700753CB1 /* ButtonNavigationAtom.swift in Sources */,
+				3C6B414728E4CEA600CBCE9A /* LabelSmallAtom.swift in Sources */,
 				3C0F80CA28E16C9100753CB1 /* ReadyPage.swift in Sources */,
-				3C0F80BA28E134B300753CB1 /* PickerAtom.swift in Sources */,
+				3C0F80BA28E134B300753CB1 /* PickerWheelAtom.swift in Sources */,
 				3C8BA6E528D6678500ADE7DB /* ios_logger.xcdatamodeld in Sources */,
 				3C0F80B828E1339F00753CB1 /* ItemAtom.swift in Sources */,
 				3C8BA6DB28D6678400ADE7DB /* ContentView.swift in Sources */,
+				3C6B415128E4E08900CBCE9A /* LabelMiddleAtom.swift in Sources */,
 				3C0F80CC28E16CC400753CB1 /* ReadyTemplate.swift in Sources */,
 				3C0F80C028E1383400753CB1 /* PickerSetMolecule.swift in Sources */,
 				3C0F80C628E1563200753CB1 /* PickersOrganism.swift in Sources */,
@@ -461,6 +492,7 @@
 				3C0F80DF28E17E8C00753CB1 /* FileView.swift in Sources */,
 				3C0F80C428E155D400753CB1 /* LoggerListOrganism.swift in Sources */,
 				3C0F80D928E17DD000753CB1 /* DateTimeManager.swift in Sources */,
+				3C6B415328E4E11400CBCE9A /* ButtonSmallAtom.swift in Sources */,
 				3C0F80D128E16DB800753CB1 /* LabelsPage.swift in Sources */,
 				3C0F80DD28E17E1900753CB1 /* ScreenBrightnessManager.swift in Sources */,
 				3C0F80CE28E16D5F00753CB1 /* DataPage.swift in Sources */,
