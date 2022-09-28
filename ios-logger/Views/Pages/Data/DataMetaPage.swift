@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct ButtonSmallAtom: View {
+struct DataMetaPage: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ButtonSmallAtom_Previews: PreviewProvider {
+struct DataMetaPage_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonSmallAtom()
+        DataMetaPage()
     }
 }

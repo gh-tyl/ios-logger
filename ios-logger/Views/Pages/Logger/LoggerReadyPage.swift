@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct ReadyPage: View {
+struct LoggerReadyPage: View {
     var body: some View {
         Text("Ready page")
     }
 }
 
-struct ReadyPage_Previews: PreviewProvider {
+struct LoggerReadyPage_Previews: PreviewProvider {
     static var previews: some View {
-        ReadyPage()
+        LoggerReadyPage()
     }
 }

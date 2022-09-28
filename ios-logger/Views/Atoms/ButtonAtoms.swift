@@ -12,6 +12,7 @@ struct ButtonDefaultAtom: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
+            .frame(maxWidth: .infinity)
     }
 }
 

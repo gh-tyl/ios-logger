@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RecordingPage: View {
+struct LoggerRecordingPage: View {
     var isNavigationBarBackButtonHidden: Bool = false
     var isActive: Bool = false
     var body: some View {
@@ -11,8 +11,8 @@ struct RecordingPage: View {
     }
 }
 
-struct RecordingPage_Previews: PreviewProvider {
+struct LoggerRecordingPage_Previews: PreviewProvider {
     static var previews: some View {
-        RecordingPage()
+        LoggerRecordingPage()
     }
 }

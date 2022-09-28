@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TitleAtom: View {
+struct TitleH1Atom: View {
     @State var title: String = ""
     let height: CGFloat
     let bar_color: Color
@@ -20,9 +20,9 @@ struct TitleAtom: View {
     }
 }
 
-struct TitleAtom_Previews: PreviewProvider {
+struct TitleH1Atom_Previews: PreviewProvider {
     static var previews: some View {
-        TitleAtom(
+        TitleH1Atom(
             title: "title", height: 2.0, bar_color: .gray
         ).previewLayout(.sizeThatFits)
     }

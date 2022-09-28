@@ -9,7 +9,7 @@ struct LoggerTemplate: View {
     var body: some View {
         VStack{
             ScrollView {
-                TitleAtom(
+                TitleH1Atom(
                     title: title, height: height, bar_color: bar_color
                 )
                 LoggerListOrganism()
@@ -17,7 +17,7 @@ struct LoggerTemplate: View {
             .frame(maxHeight: .infinity, alignment: .top)
             Spacer()
             ButtonNavigationAtom(
-                isActive: isActive, content: ReadyPage()
+                isActive: isActive, content: LoggerReadyPage()
             )
             Spacer()
             }

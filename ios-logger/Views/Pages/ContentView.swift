@@ -20,6 +20,10 @@ struct ContentView: View {
                 Text("Data")
                 Image(systemName: "list.dash.header.rectangle")
             }
+            SettingsPage().tabItem {
+                Text("Settings")
+                Image(systemName: "list.dash.header.rectangle")
+            }
         }
     }
 }

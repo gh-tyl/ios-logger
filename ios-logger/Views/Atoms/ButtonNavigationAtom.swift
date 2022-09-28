@@ -12,28 +12,30 @@ struct ButtonNavigationAtom<Content: View>: View {
             NavigationLink {
                 content
             } label: {
-                Button("Button Default") {
-                }
-                .buttonStyle(ButtonDefaultAtom())
+                Text("Text")
+                    .buttonStyle(ButtonDefaultAtom())
+//                Button("Button") {
+//                }
+//                .buttonStyle(ButtonDefaultAtom())
             }
         }
 //        Button label
-//        VStack {
-//            NavigationLink {
-//                content
-//            } label: {
-//                Image(systemName: imgName)
-//                    .foregroundColor(imgColor)
-//                    .font(.system(size: imgSize)
-//                    )
+//            VStack {
+//                NavigationLink {
+//                    content
+//                } label: {
+//                    Image(systemName: imgName)
+//                        .foregroundColor(imgColor)
+//                        .font(.system(size: imgSize)
+//                        )
+//                }
 //            }
-//        }
     }
 }
 
 struct ButtonNavigationAtom_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonNavigationAtom(isActive: true, content: LoggerPage())
+        ButtonNavigationAtom(isActive: true, content: LoggerReadyPage())
             .previewLayout(.sizeThatFits)
     }
 }

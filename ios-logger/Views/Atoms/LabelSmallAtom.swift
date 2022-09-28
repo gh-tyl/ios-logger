@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LabelSmallAtom: View {
-    @State var value: String = "58%"
+    @State var value: String
 
     var body: some View {
         Text(value)
@@ -11,7 +11,7 @@ struct LabelSmallAtom: View {
 
 struct LabelSmallAtom_Previews: PreviewProvider {
     static var previews: some View {
-        LabelSmallAtom()
+        LabelSmallAtom(value: "58%")
             .previewLayout(.sizeThatFits)
     }
 }

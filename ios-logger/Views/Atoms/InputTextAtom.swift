@@ -1,10 +1,3 @@
-//
-//  InputTextAtom.swift
-//  ios-logger
-//
-//  Created by Tyler Inari on 2022-09-28.
-//
-
 import SwiftUI
 
 struct InputTextAtom: View {

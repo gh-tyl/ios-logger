@@ -1,19 +1,19 @@
 import SwiftUI
 
-struct PickersOrganism: View {
+struct LoggerPickersOrganism: View {
     let titles = ["Activity", "Location"]
 
     var body: some View {
         VStack {
             ForEach(titles, id: \.self) { title in
-                PickerSetMolecule(title: title)
+                LoggerLabelPickerMolecule(title: title)
             }
         }
     }
 }
 
-struct PickersOrganism_Previews: PreviewProvider {
+struct LoggerPickersOrganism_Previews: PreviewProvider {
     static var previews: some View {
-        PickersOrganism().previewLayout(.sizeThatFits)
+        LoggerPickersOrganism().previewLayout(.sizeThatFits)
     }
 }
