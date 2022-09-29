@@ -15,7 +15,7 @@
 		3C0F80BE28E1366100753CB1 /* LoggerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BD28E1366100753CB1 /* LoggerPage.swift */; };
 		3C0F80C028E1383400753CB1 /* LoggerLabelPickerMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BF28E1383400753CB1 /* LoggerLabelPickerMolecule.swift */; };
 		3C0F80C228E1389C00753CB1 /* LoggerItemMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C128E1389C00753CB1 /* LoggerItemMolecule.swift */; };
-		3C0F80C428E155D400753CB1 /* LoggerListOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C328E155D400753CB1 /* LoggerListOrganism.swift */; };
+		3C0F80C428E155D400753CB1 /* LoggerListItemsOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C328E155D400753CB1 /* LoggerListItemsOrganism.swift */; };
 		3C0F80C628E1563200753CB1 /* LoggerPickersOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C528E1563200753CB1 /* LoggerPickersOrganism.swift */; };
 		3C0F80C828E16AF800753CB1 /* LoggerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C728E16AF800753CB1 /* LoggerTemplate.swift */; };
 		3C0F80CA28E16C9100753CB1 /* LoggerReadyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80C928E16C9100753CB1 /* LoggerReadyPage.swift */; };
@@ -32,7 +32,7 @@
 		3C0F80E128E17EB100753CB1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80E028E17EB100753CB1 /* FileManager.swift */; };
 		3C0F80E328E17EE200753CB1 /* UIActivityModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */; };
 		3C1C526828E4FD74002982BE /* LoggerDataOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C526728E4FD74002982BE /* LoggerDataOrganism.swift */; };
-		3C1C526A28E4FF49002982BE /* LoggerTimeTriggerOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C526928E4FF49002982BE /* LoggerTimeTriggerOrganism.swift */; };
+		3C1C526A28E4FF49002982BE /* LoggerTimeTriggerMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C526928E4FF49002982BE /* LoggerTimeTriggerMolecule.swift */; };
 		3C1C526D28E50843002982BE /* PickerMenuAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C526C28E50843002982BE /* PickerMenuAtom.swift */; };
 		3C35BD5728E00980001795A1 /* TitleH1Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35BD5628E00980001795A1 /* TitleH1Atom.swift */; };
 		3C6B414428E4C85600CBCE9A /* ButtonAtoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B414328E4C85600CBCE9A /* ButtonAtoms.swift */; };
@@ -47,6 +47,9 @@
 		3C6B415728E4E28900CBCE9A /* LoggerMemoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B415628E4E28900CBCE9A /* LoggerMemoPage.swift */; };
 		3C6B415928E4E2E400CBCE9A /* LabelCreatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B415828E4E2E400CBCE9A /* LabelCreatePage.swift */; };
 		3C6B415B28E4E36200CBCE9A /* DataMetaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B415A28E4E36200CBCE9A /* DataMetaPage.swift */; };
+		3C6EBFAF28E6481900D6734F /* LoggerMemoButtonsMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EBFAE28E6481900D6734F /* LoggerMemoButtonsMolecule.swift */; };
+		3C6EBFB128E6495B00D6734F /* LoggerMemoTimeOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EBFB028E6495B00D6734F /* LoggerMemoTimeOrganism.swift */; };
+		3C6EBFB328E64A0800D6734F /* LoggerMemoTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EBFB228E64A0800D6734F /* LoggerMemoTemplate.swift */; };
 		3C8BA6D928D6678400ADE7DB /* ios_loggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */; };
 		3C8BA6DB28D6678400ADE7DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6DA28D6678400ADE7DB /* ContentView.swift */; };
 		3C8BA6DD28D6678500ADE7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BA6DC28D6678500ADE7DB /* Assets.xcassets */; };
@@ -56,6 +59,8 @@
 		3C8BA6EF28D6678500ADE7DB /* ios_loggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6EE28D6678500ADE7DB /* ios_loggerTests.swift */; };
 		3C8BA6F928D6678500ADE7DB /* ios_loggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6F828D6678500ADE7DB /* ios_loggerUITests.swift */; };
 		3C8BA6FB28D6678500ADE7DB /* ios_loggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6FA28D6678500ADE7DB /* ios_loggerUITestsLaunchTests.swift */; };
+		3C8BF39228E639300091C998 /* LoggerRecordingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BF39128E639300091C998 /* LoggerRecordingTemplate.swift */; };
+		3C8BF39428E639B70091C998 /* LoggerListRecordingOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BF39328E639B70091C998 /* LoggerListRecordingOrganism.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +89,7 @@
 		3C0F80BD28E1366100753CB1 /* LoggerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPage.swift; sourceTree = "<group>"; };
 		3C0F80BF28E1383400753CB1 /* LoggerLabelPickerMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerLabelPickerMolecule.swift; sourceTree = "<group>"; };
 		3C0F80C128E1389C00753CB1 /* LoggerItemMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerItemMolecule.swift; sourceTree = "<group>"; };
-		3C0F80C328E155D400753CB1 /* LoggerListOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerListOrganism.swift; sourceTree = "<group>"; };
+		3C0F80C328E155D400753CB1 /* LoggerListItemsOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerListItemsOrganism.swift; sourceTree = "<group>"; };
 		3C0F80C528E1563200753CB1 /* LoggerPickersOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPickersOrganism.swift; sourceTree = "<group>"; };
 		3C0F80C728E16AF800753CB1 /* LoggerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTemplate.swift; sourceTree = "<group>"; };
 		3C0F80C928E16C9100753CB1 /* LoggerReadyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerReadyPage.swift; sourceTree = "<group>"; };
@@ -101,7 +106,7 @@
 		3C0F80E028E17EB100753CB1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		3C0F80E228E17EE200753CB1 /* UIActivityModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityModal.swift; sourceTree = "<group>"; };
 		3C1C526728E4FD74002982BE /* LoggerDataOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerDataOrganism.swift; sourceTree = "<group>"; };
-		3C1C526928E4FF49002982BE /* LoggerTimeTriggerOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTimeTriggerOrganism.swift; sourceTree = "<group>"; };
+		3C1C526928E4FF49002982BE /* LoggerTimeTriggerMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTimeTriggerMolecule.swift; sourceTree = "<group>"; };
 		3C1C526C28E50843002982BE /* PickerMenuAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerMenuAtom.swift; sourceTree = "<group>"; };
 		3C35BD5628E00980001795A1 /* TitleH1Atom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleH1Atom.swift; sourceTree = "<group>"; };
 		3C6B414328E4C85600CBCE9A /* ButtonAtoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAtoms.swift; sourceTree = "<group>"; };
@@ -116,6 +121,9 @@
 		3C6B415628E4E28900CBCE9A /* LoggerMemoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMemoPage.swift; sourceTree = "<group>"; };
 		3C6B415828E4E2E400CBCE9A /* LabelCreatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCreatePage.swift; sourceTree = "<group>"; };
 		3C6B415A28E4E36200CBCE9A /* DataMetaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMetaPage.swift; sourceTree = "<group>"; };
+		3C6EBFAE28E6481900D6734F /* LoggerMemoButtonsMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMemoButtonsMolecule.swift; sourceTree = "<group>"; };
+		3C6EBFB028E6495B00D6734F /* LoggerMemoTimeOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMemoTimeOrganism.swift; sourceTree = "<group>"; };
+		3C6EBFB228E64A0800D6734F /* LoggerMemoTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMemoTemplate.swift; sourceTree = "<group>"; };
 		3C8BA6D528D6678400ADE7DB /* ios-logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_loggerApp.swift; sourceTree = "<group>"; };
 		3C8BA6DA28D6678400ADE7DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +136,8 @@
 		3C8BA6F428D6678500ADE7DB /* ios-loggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-loggerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8BA6F828D6678500ADE7DB /* ios_loggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_loggerUITests.swift; sourceTree = "<group>"; };
 		3C8BA6FA28D6678500ADE7DB /* ios_loggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_loggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C8BF39128E639300091C998 /* LoggerRecordingTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerRecordingTemplate.swift; sourceTree = "<group>"; };
+		3C8BF39328E639B70091C998 /* LoggerListRecordingOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerListRecordingOrganism.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +171,8 @@
 				3C0F80C128E1389C00753CB1 /* LoggerItemMolecule.swift */,
 				3C0F80BF28E1383400753CB1 /* LoggerLabelPickerMolecule.swift */,
 				3C1C526728E4FD74002982BE /* LoggerDataOrganism.swift */,
-				3C1C526928E4FF49002982BE /* LoggerTimeTriggerOrganism.swift */,
+				3C1C526928E4FF49002982BE /* LoggerTimeTriggerMolecule.swift */,
+				3C6EBFAE28E6481900D6734F /* LoggerMemoButtonsMolecule.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -171,6 +182,8 @@
 			children = (
 				3C0F80C728E16AF800753CB1 /* LoggerTemplate.swift */,
 				3C0F80CB28E16CC400753CB1 /* LoggerReadyTemplate.swift */,
+				3C8BF39128E639300091C998 /* LoggerRecordingTemplate.swift */,
+				3C6EBFB228E64A0800D6734F /* LoggerMemoTemplate.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -278,8 +291,10 @@
 		3C35BD5128E002C9001795A1 /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
-				3C0F80C328E155D400753CB1 /* LoggerListOrganism.swift */,
+				3C0F80C328E155D400753CB1 /* LoggerListItemsOrganism.swift */,
 				3C0F80C528E1563200753CB1 /* LoggerPickersOrganism.swift */,
+				3C8BF39328E639B70091C998 /* LoggerListRecordingOrganism.swift */,
+				3C6EBFB028E6495B00D6734F /* LoggerMemoTimeOrganism.swift */,
 			);
 			path = Organisms;
 			sourceTree = "<group>";
@@ -507,6 +522,7 @@
 				3C6B415928E4E2E400CBCE9A /* LabelCreatePage.swift in Sources */,
 				3C6B414928E4CFD100CBCE9A /* ButtonExecFullAtom.swift in Sources */,
 				3C0F80D728E17DA500753CB1 /* LogManager.swift in Sources */,
+				3C6EBFB328E64A0800D6734F /* LoggerMemoTemplate.swift in Sources */,
 				3C8BA6E228D6678500ADE7DB /* Persistence.swift in Sources */,
 				3C6B414F28E4E03900CBCE9A /* InputTextAtom.swift in Sources */,
 				3C6B414D28E4DD2500CBCE9A /* LabelTimeAtom.swift in Sources */,
@@ -516,14 +532,16 @@
 				3C6B414B28E4D04800CBCE9A /* TitleH2Atom.swift in Sources */,
 				3C0F80BC28E1352700753CB1 /* ButtonNavigationAtom.swift in Sources */,
 				3C6B414728E4CEA600CBCE9A /* LabelSmallAtom.swift in Sources */,
+				3C8BF39228E639300091C998 /* LoggerRecordingTemplate.swift in Sources */,
 				3C0F80CA28E16C9100753CB1 /* LoggerReadyPage.swift in Sources */,
 				3C1C526D28E50843002982BE /* PickerMenuAtom.swift in Sources */,
 				3C0F80BA28E134B300753CB1 /* PickerWheelAtom.swift in Sources */,
 				3C8BA6E528D6678500ADE7DB /* ios_logger.xcdatamodeld in Sources */,
-				3C1C526A28E4FF49002982BE /* LoggerTimeTriggerOrganism.swift in Sources */,
+				3C1C526A28E4FF49002982BE /* LoggerTimeTriggerMolecule.swift in Sources */,
 				3C0F80B828E1339F00753CB1 /* ItemAtom.swift in Sources */,
 				3C1C526828E4FD74002982BE /* LoggerDataOrganism.swift in Sources */,
 				3C6B415528E4E24B00CBCE9A /* SettingsPage.swift in Sources */,
+				3C6EBFAF28E6481900D6734F /* LoggerMemoButtonsMolecule.swift in Sources */,
 				3C8BA6DB28D6678400ADE7DB /* ContentView.swift in Sources */,
 				3C6B415128E4E08900CBCE9A /* ButtonExecHalfAtom.swift in Sources */,
 				3C0F80CC28E16CC400753CB1 /* LoggerReadyTemplate.swift in Sources */,
@@ -531,9 +549,10 @@
 				3C0F80C628E1563200753CB1 /* LoggerPickersOrganism.swift in Sources */,
 				3C0F80C228E1389C00753CB1 /* LoggerItemMolecule.swift in Sources */,
 				3C0F80C828E16AF800753CB1 /* LoggerTemplate.swift in Sources */,
+				3C8BF39428E639B70091C998 /* LoggerListRecordingOrganism.swift in Sources */,
 				3C0F80BE28E1366100753CB1 /* LoggerPage.swift in Sources */,
 				3C0F80DF28E17E8C00753CB1 /* OldDataPage.swift in Sources */,
-				3C0F80C428E155D400753CB1 /* LoggerListOrganism.swift in Sources */,
+				3C0F80C428E155D400753CB1 /* LoggerListItemsOrganism.swift in Sources */,
 				3C0F80D928E17DD000753CB1 /* DateTimeManager.swift in Sources */,
 				3C6B415328E4E11400CBCE9A /* ButtonSmallAtom.swift in Sources */,
 				3C0F80D128E16DB800753CB1 /* LabelsPage.swift in Sources */,
@@ -545,6 +564,7 @@
 				3C0F80B428E12FCB00753CB1 /* ToggleAtom.swift in Sources */,
 				3C0F80D528E17D7900753CB1 /* Altimeter.swift in Sources */,
 				3C35BD5728E00980001795A1 /* TitleH1Atom.swift in Sources */,
+				3C6EBFB128E6495B00D6734F /* LoggerMemoTimeOrganism.swift in Sources */,
 				3C0F80DB28E17DFA00753CB1 /* RecordManager.swift in Sources */,
 				3C0F80D328E16E2200753CB1 /* LoggerRecordingPage.swift in Sources */,
 			);

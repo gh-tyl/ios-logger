@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PickerAtom: View {
+struct PickerMenuAtom: View {
     @State var selection: Int = 0
     let data = ["0", "1", "2", "3", "4"]
 
@@ -9,6 +9,8 @@ struct PickerAtom: View {
             ForEach(data, id:\.self) { value in
                 Text("\(value)")
                     .tag(value)
+                    .frame(maxWidth: .infinity)
+                    .padding()
             }
         }
         .pickerStyle(.menu)
@@ -17,9 +19,9 @@ struct PickerAtom: View {
     }
 }
 
-struct PickerAtom_Previews: PreviewProvider {
+struct PickerMenuAtom_Previews: PreviewProvider {
     static var previews: some View {
-        PickerAtom()
+        PickerMenuAtom()
             .previewLayout(.sizeThatFits)
     }
 }

@@ -7,14 +7,20 @@ class EnvironmentData: ObservableObject {
 
 struct LoggerPage: View {
     @EnvironmentObject var envData: EnvironmentData
-        @State var isActive: Bool = true
+    @State var isActive: Bool = true
+    var title: String = "Logger"
 
-        var body: some View {
+    var body: some View {
+        VStack {
+            TitleH1Atom(
+                title: title
+            )
             NavigationStack {
                 LoggerTemplate()
             }
-            .navigationTitle("Logger")
+            .navigationTitle(title)
         }
+    }
 }
 
 struct LoggerPage_Previews: PreviewProvider {

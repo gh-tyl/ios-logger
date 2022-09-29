@@ -7,7 +7,7 @@ struct LoggerLabelPickerMolecule: View {
 
     var body: some View {
         VStack {
-            TitleH1Atom(title: title, height: height, bar_color: bar_color)
+            TitleH1Atom(title: title)
             PickerWheelAtom()
         }
     }

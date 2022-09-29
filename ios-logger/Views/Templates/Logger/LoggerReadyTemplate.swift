@@ -10,20 +10,20 @@ struct LoggerReadyTemplate: View {
         VStack{
             ScrollView {
                 TitleH1Atom(
-                    title: title, height: height, bar_color: bar_color
+                    title: title
                 )
                 LoggerPickersOrganism()
             }
-            .frame(maxHeight: .infinity, alignment: .top)
-            Spacer()
-//            NavigationButtonView(isActive: isActive, content: RecordingView())
-            Spacer()
+//            .frame(maxHeight: .infinity, alignment: .top)
+            .frame(maxHeight: .leastNormalMagnitude)
+            ButtonNavigationAtom(content: LoggerRecordingPage(isNavigationBarBackButtonHidden: false))
         }
     }
 }
 
 struct LoggerReadyTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerReadyTemplate().previewLayout(.sizeThatFits)
+        LoggerReadyTemplate()
+            .previewLayout(.sizeThatFits)
     }
 }

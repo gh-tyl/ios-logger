@@ -2,7 +2,9 @@ import SwiftUI
 
 struct LoggerReadyPage: View {
     var body: some View {
-        Text("Ready page")
+        VStack {
+            LoggerReadyTemplate()
+        }
     }
 }
 

@@ -9,12 +9,15 @@ import SwiftUI
 
 struct LabelTimeAtom: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Time")
+            .frame(maxWidth: .infinity)
+            .padding()
     }
 }
 
 struct LabelTimeAtom_Previews: PreviewProvider {
     static var previews: some View {
         LabelTimeAtom()
+            .previewLayout(.sizeThatFits)
     }
 }

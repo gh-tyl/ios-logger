@@ -7,11 +7,13 @@ struct ButtonExecHalfAtom: View {
         Button(label) {
         }
         .buttonStyle(ButtonDefaultAtom())
+        .padding()
     }
 }
 
 struct ButtonExecHalfAtom_Previews: PreviewProvider {
     static var previews: some View {
         ButtonExecHalfAtom(label: "Exec")
+            .previewLayout(.sizeThatFits)
     }
 }
