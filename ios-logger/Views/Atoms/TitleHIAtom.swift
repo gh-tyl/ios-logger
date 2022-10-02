@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct TitleH1Atom: View {
+struct TitleHIAtom: View {
     @State var title: String = ""
     let height: CGFloat = 2.0
-    var bar_color: Color = .gray
+//    var color: Color = .gray
 
     var body: some View {
         VStack {
@@ -13,16 +13,16 @@ struct TitleH1Atom: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
         Rectangle()
-            .fill(bar_color)
+//            .fill(color)
+            .fill(.gray)
             .frame(height: height)
-            .padding(.horizontal)
         }
     }
 }
 
-struct TitleH1Atom_Previews: PreviewProvider {
+struct TitleHIAtom_Previews: PreviewProvider {
     static var previews: some View {
-        TitleH1Atom(
+        TitleHIAtom(
             title: "title"
         ).previewLayout(.sizeThatFits)
     }

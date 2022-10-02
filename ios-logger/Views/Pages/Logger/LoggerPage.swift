@@ -12,7 +12,7 @@ struct LoggerPage: View {
 
     var body: some View {
         VStack {
-            TitleH1Atom(
+            TitleHIAtom(
                 title: title
             )
             NavigationStack {

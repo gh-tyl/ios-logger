@@ -9,7 +9,7 @@ struct LoggerReadyTemplate: View {
     var body: some View {
         VStack{
             ScrollView {
-                TitleH1Atom(
+                TitleHIAtom(
                     title: title
                 )
                 LoggerPickersOrganism()
