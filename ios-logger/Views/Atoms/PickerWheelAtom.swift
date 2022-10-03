@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PickerAtom: View {
+struct PickerWheelAtom: View {
     @State var selection: Int = 0
     let data = ["0", "1", "2", "3", "4"]
 
@@ -15,8 +15,8 @@ struct PickerAtom: View {
     }
 }
 
-struct PickerAtom_Previews: PreviewProvider {
+struct PickerWheelAtom_Previews: PreviewProvider {
     static var previews: some View {
-        PickerAtom().previewLayout(.sizeThatFits)
+        PickerWheelAtom().previewLayout(.sizeThatFits)
     }
 }
