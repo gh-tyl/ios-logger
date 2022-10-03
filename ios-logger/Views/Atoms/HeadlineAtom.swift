@@ -1,14 +1,14 @@
 import SwiftUI
 
-struct TitleHIAtom: View {
-    @State var title: String = ""
+struct HeadlineAtom: View {
+    @State var headline: String = ""
     let height: CGFloat = 2.0
 //    var color: Color = .gray
 
     var body: some View {
         VStack {
-            Text(title)
-            .font(.title)
+            Text(headline)
+            .font(.headline)
             .fontWeight(.medium)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
@@ -18,12 +18,12 @@ struct TitleHIAtom: View {
             .frame(height: height)
         }
     }
+
 }
 
-struct TitleHIAtom_Previews: PreviewProvider {
+struct HeadlineAtom_Previews: PreviewProvider {
     static var previews: some View {
-        TitleHIAtom(
-            title: "title"
-        ).previewLayout(.sizeThatFits)
+        HeadlineAtom(headline: "Headline")
+            .previewLayout(.sizeThatFits)
     }
 }

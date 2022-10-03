@@ -1,8 +1,10 @@
 import SwiftUI
 
-struct LoggerTemplate: View {
+struct LoggerDataTemplate: View {
+    @Binding var state: ContentState
+
     var isActive: Bool = true
-    var title: String = "Logger"
+    var title: String = "Data"
 
     var body: some View {
         NavigationStack {
@@ -11,12 +13,11 @@ struct LoggerTemplate: View {
                     title: title
                 )
                 ScrollView {
-                    LoggerListItemsOrganism()
+                    LoggerListRecordingOrganism()
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
-                ButtonNavigationAtom(
-                    isActive: isActive, content: LoggerReadyPage()
-                )
+                ButtonSwitchAtom(state: $state, moveToName: "Memo", moveTo: .memo)
+                ButtonExecFullAtom(label: "Stop")
                 Spacer()
             }
         }
@@ -25,9 +26,9 @@ struct LoggerTemplate: View {
     }
 }
 
-struct LoggerTemplate_Previews: PreviewProvider {
+struct LoggerDataTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerTemplate()
+        LoggerDataTemplate(state: .constant(.data))
             .environmentObject(SensorItemModelData())
     }
 }

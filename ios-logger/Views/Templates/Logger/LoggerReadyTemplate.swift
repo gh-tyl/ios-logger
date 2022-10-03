@@ -3,21 +3,25 @@ import SwiftUI
 struct LoggerReadyTemplate: View {
     var isActive: Bool = true
     var title: String = "Ready"
-    var height: CGFloat = 2.0
-    var bar_color: Color = .gray
 
     var body: some View {
-        VStack{
-            ScrollView {
-                TitleHIAtom(
+        NavigationStack {
+            VStack{
+                TitleAtom(
                     title: title
                 )
-                LoggerPickersOrganism()
+                ScrollView {
+                    LoggerPickersOrganism()
+                }
+                .frame(maxHeight: .infinity, alignment: .top)
             }
-//            .frame(maxHeight: .infinity, alignment: .top)
-            .frame(maxHeight: .leastNormalMagnitude)
-            ButtonNavigationAtom(content: LoggerRecordingPage(isNavigationBarBackButtonHidden: false))
+            ButtonNavigationAtom(
+                isActive: isActive, content: LoggerRecordingPage()
+            )
+            Spacer()
         }
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

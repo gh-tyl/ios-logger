@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PickerMenuAtom: View {
     @State var selection: Int = 0
-    let data = ["0", "1", "2", "3", "4"]
+    let data = ["acitivity 00", "acitivity 01", "acitivity 02", "acitivity 03"]
 
     var body: some View {
         Picker(selection: $selection, label: Text("Picker")) {

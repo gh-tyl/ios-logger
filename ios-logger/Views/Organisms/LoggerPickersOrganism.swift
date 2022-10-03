@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct LoggerPickersOrganism: View {
-    let titles = ["Activity", "Location"]
+    let headlines = ["Activity", "Location"]
 
     var body: some View {
         VStack {
-            ForEach(titles, id: \.self) { title in
-                LoggerLabelPickerMolecule(title: title)
+            ForEach(headlines, id: \.self) { headline in
+                LoggerLabelPickerMolecule(headline: headline)
             }
         }
     }

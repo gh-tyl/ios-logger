@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 class EnvironmentData: ObservableObject {
     @Published var isNavigationActive: Binding<Bool> = Binding<Bool>.constant(false)
 }
@@ -11,15 +10,7 @@ struct LoggerPage: View {
     var title: String = "Logger"
 
     var body: some View {
-        VStack {
-            TitleHIAtom(
-                title: title
-            )
-            NavigationStack {
-                LoggerTemplate()
-            }
-            .navigationTitle(title)
-        }
+        LoggerTemplate()
     }
 }
 

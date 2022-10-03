@@ -1,18 +1,32 @@
 import SwiftUI
 
+enum ContentState {
+    case data
+    case memo
+}
+
 struct LoggerRecordingPage: View {
-    var isNavigationBarBackButtonHidden: Bool = false
-    var isActive: Bool = false
+    @EnvironmentObject var envData: EnvironmentData
+    @State var state: ContentState = .data
+
     var body: some View {
-        VStack {
-//            ButtonNavigationAtom(isActive: isActive, content: LoggerPage())
+        NavigationStack {
+            switch state {
+            case .data:
+                LoggerDataPage(state: $state)
+            case .memo:
+                LoggerMemoPage(state: $state)
+            }
         }
-        .navigationBarBackButtonHidden(isNavigationBarBackButtonHidden)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct LoggerRecordingPage_Previews: PreviewProvider {
+    @Binding var state: ContentState
+
     static var previews: some View {
-        LoggerRecordingPage()
+        LoggerRecordingPage(state: .data)
+            .environmentObject(SensorItemModelData())
     }
 }
