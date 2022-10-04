@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct ButtonSwitchAtom: View {
-    @Binding var state: ContentState
+struct ButtonSwitchDataAtom: View {
+    @Binding var state: DataContentState
     var moveToName: String
-    var moveTo: ContentState
+    var moveTo: DataContentState
 
     var body: some View {
         Button(moveToName) {
@@ -14,9 +14,9 @@ struct ButtonSwitchAtom: View {
     }
 }
 
-struct ButtonSwitchAtom_Previews: PreviewProvider {
+struct ButtonSwitchDataAtom_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonSwitchAtom(state: .constant(.data), moveToName: "Memo", moveTo: .memo)
+        ButtonSwitchDataAtom(state: .constant(.main), moveToName: "Meta", moveTo: .meta)
             .previewLayout(.sizeThatFits)
     }
 }

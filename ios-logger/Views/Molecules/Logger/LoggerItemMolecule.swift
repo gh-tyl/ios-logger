@@ -7,7 +7,8 @@ struct LoggerItemMolecule: View {
         HStack {
             ItemAtom(sensorItemNameEN: sensorItemModel.itemNameEN)
             ToggleAtom(sensorItemModel: sensorItemModel)
-        }.frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 

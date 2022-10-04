@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LoggerMemoPage: View {
-    @Binding var state: ContentState
+    @Binding var state: LoggerContentState
 
     var isActive: Bool = true
     var title: String = "Memo"

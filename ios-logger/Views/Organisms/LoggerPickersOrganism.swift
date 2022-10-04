@@ -14,6 +14,7 @@ struct LoggerPickersOrganism: View {
 
 struct LoggerPickersOrganism_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerPickersOrganism().previewLayout(.sizeThatFits)
+        LoggerPickersOrganism()
+            .previewLayout(.sizeThatFits)
     }
 }

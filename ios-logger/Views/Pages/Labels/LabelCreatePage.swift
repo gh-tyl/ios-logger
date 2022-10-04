@@ -1,13 +1,17 @@
 import SwiftUI
 
 struct LabelCreatePage: View {
+    var title: String
+    var headline: String
+    var label: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LabelCreateTemplate(title: title, headline: headline, label: label)
     }
 }
 
 struct LabelCreatePage_Previews: PreviewProvider {
     static var previews: some View {
-        LabelCreatePage()
+        LabelCreatePage(title: "title", headline: "headline", label: "label")
     }
 }
