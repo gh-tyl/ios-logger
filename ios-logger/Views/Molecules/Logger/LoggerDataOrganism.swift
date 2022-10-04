@@ -7,7 +7,8 @@ struct LoggerDataOrganism: View {
         HStack {
             ItemAtom(sensorItemNameEN: sensorItemModel.itemNameEN)
             LabelSmallAtom(value: "60%")
-        }.frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 

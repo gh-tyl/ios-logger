@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LoggerDataTemplate: View {
-    @Binding var state: ContentState
+    @Binding var state: LoggerContentState
 
     var isActive: Bool = true
     var title: String = "Data"
@@ -16,7 +16,7 @@ struct LoggerDataTemplate: View {
                     LoggerListRecordingOrganism()
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
-                ButtonSwitchAtom(state: $state, moveToName: "Memo", moveTo: .memo)
+                ButtonSwitchLoggerAtom(state: $state, moveToName: "Memo", moveTo: .memo)
                 ButtonExecFullAtom(label: "Stop")
                 Spacer()
             }

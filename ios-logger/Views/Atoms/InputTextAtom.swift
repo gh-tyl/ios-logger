@@ -2,12 +2,19 @@ import SwiftUI
 
 struct InputTextAtom: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TextField(
+            "User name (email address)", text: .constant("text")
+            )
+            .textInputAutocapitalization(.never)
+            .disableAutocorrection(true)
+            .border(.secondary)
+            .padding()
     }
 }
 
 struct InputTextAtom_Previews: PreviewProvider {
     static var previews: some View {
         InputTextAtom()
+            .previewLayout(.sizeThatFits)
     }
 }

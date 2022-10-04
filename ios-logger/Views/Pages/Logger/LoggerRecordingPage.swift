@@ -1,30 +1,20 @@
 import SwiftUI
 
-enum ContentState {
+enum LoggerContentState {
     case data
     case memo
 }
 
 struct LoggerRecordingPage: View {
     @EnvironmentObject var envData: EnvironmentData
-    @State var state: ContentState = .data
+    @State var state: LoggerContentState = .data
 
     var body: some View {
-        NavigationStack {
-            switch state {
-            case .data:
-                LoggerDataPage(state: $state)
-            case .memo:
-                LoggerMemoPage(state: $state)
-            }
-        }
-        .navigationBarBackButtonHidden(true)
+        LoggerRecordingTemplate(state: state)
     }
 }
 
 struct LoggerRecordingPage_Previews: PreviewProvider {
-    @Binding var state: ContentState
-
     static var previews: some View {
         LoggerRecordingPage(state: .data)
             .environmentObject(SensorItemModelData())
