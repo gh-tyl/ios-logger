@@ -1,11 +1,12 @@
 import SwiftUI
 
 struct LabelCreateOrganism: View {
-    var headline: String
+    var headlineCategory: String = "Category"
+    @State var headline: String = "headlineCategory"
 
     var body: some View {
         VStack {
-            PickerWithLabelMolecule(headline: headline)
+            PickerWithLabelMolecule(headline: headlineCategory)
             InputWithLabelMolecule(headline: headline)
         }
     }
@@ -13,7 +14,7 @@ struct LabelCreateOrganism: View {
 
 struct LabelCreateOrganism_Previews: PreviewProvider {
     static var previews: some View {
-        LabelCreateOrganism(headline: "Category")
+        LabelCreateOrganism()
             .previewLayout(.sizeThatFits)
     }
 }

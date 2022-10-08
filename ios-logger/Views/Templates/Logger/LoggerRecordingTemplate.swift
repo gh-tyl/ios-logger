@@ -20,6 +20,6 @@ struct LoggerRecordingTemplate: View {
 struct LoggerRecordingTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LoggerRecordingTemplate(state: .data)
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemModelData())
     }
 }

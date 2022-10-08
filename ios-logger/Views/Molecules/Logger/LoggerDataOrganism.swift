@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct LoggerDataOrganism: View {
-    @State var sensorItemModel: SensorItemModel
+    @State var loggerItemModel: LoggerItemModel
 
     var body: some View {
         HStack {
-            ItemAtom(sensorItemNameEN: sensorItemModel.itemNameEN)
+            ItemAtom(loggerItemNameEN: loggerItemModel.itemNameEN)
             LabelSmallAtom(value: "60%")
         }
         .frame(maxWidth: .infinity)
@@ -15,7 +15,7 @@ struct LoggerDataOrganism: View {
 struct LoggerDataOrganism_Previews: PreviewProvider {
     static var previews: some View {
         let index: Int = 0
-        LoggerDataOrganism(sensorItemModel: SensorItemModelData().SensorItems[index])
+        LoggerDataOrganism(loggerItemModel: LoggerItemModelData().LoggerItems[index])
             .previewLayout(.sizeThatFits)
     }
 }

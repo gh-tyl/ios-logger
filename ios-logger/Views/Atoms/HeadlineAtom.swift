@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct HeadlineAtom: View {
-    @State var headline: String = ""
+    @State var headline: String
     let height: CGFloat = 2.0
-//    var color: Color = .gray
+    var color: Color = .gray
 
     var body: some View {
         VStack {
@@ -13,9 +13,10 @@ struct HeadlineAtom: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
         Rectangle()
-//            .fill(color)
-            .fill(.gray)
+            .fill(color)
+//            .fill(.gray)
             .frame(height: height)
+            .padding(.horizontal)
         }
     }
 

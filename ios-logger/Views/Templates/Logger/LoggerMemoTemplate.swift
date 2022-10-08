@@ -20,14 +20,11 @@ struct LoggerMemoTemplate: View {
                 Spacer()
             }
         }
-        .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LoggerMemoTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LoggerMemoTemplate(state: .constant(.memo))
-            .previewLayout(.sizeThatFits)
     }
 }

@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct TitleAtom: View {
-    @State var title: String = ""
+    @State var title: String
     let height: CGFloat = 2.0
-//    var color: Color = .gray
+    var color: Color = .gray
 
     var body: some View {
         VStack {
@@ -11,10 +11,9 @@ struct TitleAtom: View {
             .font(.title)
             .fontWeight(.medium)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
+            .padding()
         Rectangle()
-//            .fill(color)
-            .fill(.gray)
+            .fill(color)
             .frame(height: height)
         }
     }

@@ -28,6 +28,5 @@ struct LoggerReadyTemplate: View {
 struct LoggerReadyTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LoggerReadyTemplate()
-            .previewLayout(.sizeThatFits)
     }
 }

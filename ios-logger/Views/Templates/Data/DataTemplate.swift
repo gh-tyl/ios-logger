@@ -20,7 +20,7 @@ struct DataTemplate: View {
 struct DataTemplate_Previews: PreviewProvider {
     static var previews: some View {
         DataTemplate(state: .main)
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemModelData())
             .previewLayout(.sizeThatFits)
     }
 }

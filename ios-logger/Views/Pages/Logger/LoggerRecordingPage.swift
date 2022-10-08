@@ -17,6 +17,6 @@ struct LoggerRecordingPage: View {
 struct LoggerRecordingPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerRecordingPage(state: .data)
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemModelData())
     }
 }

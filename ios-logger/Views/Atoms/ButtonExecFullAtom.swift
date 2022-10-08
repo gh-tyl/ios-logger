@@ -15,7 +15,7 @@ struct ButtonExecFullAtom: View {
 
 struct ButtonExecFullAtom_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonExecFullAtom(label: "Start")
+        ButtonExecFullAtom(label: "label")
             .previewLayout(.sizeThatFits)
     }
 }

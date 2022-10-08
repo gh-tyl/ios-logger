@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C0F80B428E12FCB00753CB1 /* ToggleAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B328E12FCB00753CB1 /* ToggleAtom.swift */; };
-		3C0F80B628E1303D00753CB1 /* SensorItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B528E1303D00753CB1 /* SensorItemModel.swift */; };
+		3C0F80B628E1303D00753CB1 /* LoggerItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B528E1303D00753CB1 /* LoggerItemModel.swift */; };
 		3C0F80B828E1339F00753CB1 /* ItemAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B728E1339F00753CB1 /* ItemAtom.swift */; };
 		3C0F80BA28E134B300753CB1 /* PickerWheelAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80B928E134B300753CB1 /* PickerWheelAtom.swift */; };
 		3C0F80BC28E1352700753CB1 /* ButtonNavigationAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F80BB28E1352700753CB1 /* ButtonNavigationAtom.swift */; };
@@ -98,7 +98,7 @@
 
 /* Begin PBXFileReference section */
 		3C0F80B328E12FCB00753CB1 /* ToggleAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAtom.swift; sourceTree = "<group>"; };
-		3C0F80B528E1303D00753CB1 /* SensorItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemModel.swift; sourceTree = "<group>"; };
+		3C0F80B528E1303D00753CB1 /* LoggerItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerItemModel.swift; sourceTree = "<group>"; };
 		3C0F80B728E1339F00753CB1 /* ItemAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAtom.swift; sourceTree = "<group>"; };
 		3C0F80B928E134B300753CB1 /* PickerWheelAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWheelAtom.swift; sourceTree = "<group>"; };
 		3C0F80BB28E1352700753CB1 /* ButtonNavigationAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNavigationAtom.swift; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		3C35BD4928E001E2001795A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3C0F80B528E1303D00753CB1 /* SensorItemModel.swift */,
+				3C0F80B528E1303D00753CB1 /* LoggerItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C8460DB28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift in Sources */,
-				3C0F80B628E1303D00753CB1 /* SensorItemModel.swift in Sources */,
+				3C0F80B628E1303D00753CB1 /* LoggerItemModel.swift in Sources */,
 				3C6B415928E4E2E400CBCE9A /* LabelCreatePage.swift in Sources */,
 				3C6B414928E4CFD100CBCE9A /* ButtonExecFullAtom.swift in Sources */,
 				3C0F80D728E17DA500753CB1 /* LogManager.swift in Sources */,

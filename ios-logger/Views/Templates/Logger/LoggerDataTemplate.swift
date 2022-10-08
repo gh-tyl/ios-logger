@@ -21,14 +21,12 @@ struct LoggerDataTemplate: View {
                 Spacer()
             }
         }
-        .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LoggerDataTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LoggerDataTemplate(state: .constant(.data))
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemModelData())
     }
 }

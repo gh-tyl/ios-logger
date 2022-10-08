@@ -5,18 +5,19 @@ class EnvironmentData: ObservableObject {
 }
 
 struct LoggerPage: View {
+    // Set args
     @EnvironmentObject var envData: EnvironmentData
     @State var isActive: Bool = true
     var title: String = "Logger"
 
     var body: some View {
-        LoggerTemplate()
+        LoggerTemplate(isActive: isActive, title: title)
     }
 }
 
 struct LoggerPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerPage()
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemModelData())
     }
 }

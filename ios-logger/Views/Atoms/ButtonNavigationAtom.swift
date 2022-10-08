@@ -2,34 +2,21 @@ import SwiftUI
 
 struct ButtonNavigationAtom<Content: View>: View {
     @EnvironmentObject var envData: EnvironmentData
-    @State var isActive: Bool = false
+    @State var isActive: Bool
     var content: Content
-    var imgName: String = "record.circle"
-    var imgColor: Color = .yellow
-    var imgSize: CGFloat = 50.0
+    @State private var imgName: String = "record.circle"
+    @State private var imgSize: CGFloat = 50.0
+
     var body: some View {
         VStack {
             NavigationLink {
                 content
             } label: {
-                Text("Text")
-                    .buttonStyle(ButtonDefaultAtom())
-//                Button("Button") {
-//                }
-//                .buttonStyle(ButtonDefaultAtom())
+                Image(systemName: imgName)
+                    .font(.system(size: imgSize))
+                    .padding()
             }
         }
-//        Button label
-//            VStack {
-//                NavigationLink {
-//                    content
-//                } label: {
-//                    Image(systemName: imgName)
-//                        .foregroundColor(imgColor)
-//                        .font(.system(size: imgSize)
-//                        )
-//                }
-//            }
     }
 }
 
