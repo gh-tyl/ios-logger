@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct LabelsPage: View {
-    @EnvironmentObject var loggerItemModelData: LoggerItemModelData
     var isActive: Bool = true
     var title: String = "Label"
     var headlineActivity: String = "Activity"
@@ -15,6 +14,6 @@ struct LabelsPage: View {
 struct LabelsPage_Previews: PreviewProvider {
     static var previews: some View {
         LabelsPage()
-            .environmentObject(LoggerItemModelData())
+//            .environmentObject(LoggerItemsModel())
     }
 }

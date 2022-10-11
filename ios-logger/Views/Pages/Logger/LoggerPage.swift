@@ -1,23 +1,17 @@
 import SwiftUI
 
-class EnvironmentData: ObservableObject {
-    @Published var isNavigationActive: Binding<Bool> = Binding<Bool>.constant(false)
-}
-
 struct LoggerPage: View {
-    // Set args
-    @EnvironmentObject var envData: EnvironmentData
-    @State var isActive: Bool = true
-    var title: String = "Logger"
+//    @EnvironmentObject var envData: EnvironmentData
+    @StateObject private var vm = LoggerVM()
 
     var body: some View {
-        LoggerTemplate(isActive: isActive, title: title)
+        LoggerTemplate(isActive: vm.isActive, title: vm.title)
     }
 }
 
 struct LoggerPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerPage()
-            .environmentObject(LoggerItemModelData())
+            .environmentObject(LoggerItemsModel())
     }
 }

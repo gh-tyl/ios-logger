@@ -1,10 +1,3 @@
-//
-//  ios_loggerTests.swift
-//  ios-loggerTests
-//
-//  Created by Tyler Inari on 2022-09-17.
-//
-
 import XCTest
 @testable import ios_logger
 
@@ -31,6 +24,11 @@ final class ios_loggerTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+
+    func testLoggerItemModelData() {
+        let loggerItemModelData = LoggerItemModelData()
+        loggerItemModelData.updateValue()
     }
 
 }

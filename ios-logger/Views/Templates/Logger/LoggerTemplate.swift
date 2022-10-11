@@ -26,6 +26,6 @@ struct LoggerTemplate: View {
 struct LoggerTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LoggerTemplate(isActive: true, title: "title")
-            .environmentObject(LoggerItemModelData())
+            .environmentObject(LoggerItemsModel())
     }
 }

@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct LoggerRecordingTemplate: View {
-    @EnvironmentObject var envData: EnvironmentData
     @State var state: LoggerContentState = .data
 
     var body: some View {
@@ -20,6 +19,6 @@ struct LoggerRecordingTemplate: View {
 struct LoggerRecordingTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LoggerRecordingTemplate(state: .data)
-            .environmentObject(LoggerItemModelData())
+            .environmentObject(LoggerItemsModel())
     }
 }

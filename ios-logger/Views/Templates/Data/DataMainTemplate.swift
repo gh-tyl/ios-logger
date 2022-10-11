@@ -3,7 +3,7 @@ import SwiftUI
 struct DataMainTemplate: View {
     @Binding var state: DataContentState
 
-    @EnvironmentObject var loggerItemModelData: LoggerItemModelData
+    @EnvironmentObject var LoggerItemsModel: LoggerItemsModel
     var title: String
 
     var body: some View {
@@ -20,7 +20,6 @@ struct DataMainTemplate: View {
 struct DataMainTemplate_Previews: PreviewProvider {
     static var previews: some View {
         DataMainTemplate(state: .constant(.main), title: "title")
-            .environmentObject(LoggerItemModelData())
-            .previewLayout(.sizeThatFits)
+            .environmentObject(LoggerItemsModel())
     }
 }

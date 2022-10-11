@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct LoggerReadyPage: View {
+    @StateObject private var vm = LoggerReadyVM()
+
     var body: some View {
-        LoggerReadyTemplate()
+        LoggerReadyTemplate(isActive: vm.isActive, title: vm.title)
     }
 }
 

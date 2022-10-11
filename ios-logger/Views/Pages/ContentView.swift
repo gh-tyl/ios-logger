@@ -1,13 +1,17 @@
 import SwiftUI
 import CoreData
 
+//class EnvironmentData: ObservableObject {
+//    @Published var isNavigationActive: Binding<Bool> = Binding<Bool>.constant(false)
+//}
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View{
         TabView {
             LoggerPage()
-                .environmentObject(EnvironmentData())
+//                .environmentObject(EnvironmentData())
                 .tabItem {
                 Text("Sensor Logs")
                 Image(systemName: "doc")
@@ -31,7 +35,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(LoggerItemModelData())
+//            .environmentObject(LoggerItemsModel())
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ButtonNavigationAtom<Content: View>: View {
-    @EnvironmentObject var envData: EnvironmentData
     @State var isActive: Bool
     var content: Content
     @State private var imgName: String = "record.circle"

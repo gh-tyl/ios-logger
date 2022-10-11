@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LabelTemplate: View {
-    @EnvironmentObject var loggerItemModelData: LoggerItemModelData
+//    @EnvironmentObject var loggerItemsModel: LoggerItemsModel()
     var isActive: Bool
     var title: String
     var headlineActivity: String
@@ -24,7 +24,6 @@ struct LabelTemplate: View {
 struct LabelTemplate_Previews: PreviewProvider {
     static var previews: some View {
         LabelTemplate(isActive: true, title: "title", headlineActivity: "headlineActivity", headlineLocation: "headlineLocation")
-            .environmentObject(LoggerItemModelData())
-            .previewLayout(.sizeThatFits)
+//            .environmentObject(LoggerItemsModel())
     }
 }

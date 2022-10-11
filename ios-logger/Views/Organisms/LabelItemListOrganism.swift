@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct LabelItemListOrganism: View {
-    @EnvironmentObject var loggerItemModelData: LoggerItemModelData
     var headline: String
 
     var body: some View {
@@ -15,7 +14,7 @@ struct LabelItemListOrganism: View {
 struct LabelItemListOrganism_Previews: PreviewProvider {
     static var previews: some View {
         LabelItemListOrganism(headline: "Activity")
-            .environmentObject(LoggerItemModelData())
+//            .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }
 }

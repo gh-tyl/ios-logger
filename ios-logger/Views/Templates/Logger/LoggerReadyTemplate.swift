@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct LoggerReadyTemplate: View {
-    var isActive: Bool = true
-    var title: String = "Ready"
+    var isActive: Bool
+    var title: String
 
     var body: some View {
         NavigationStack {
@@ -27,6 +27,6 @@ struct LoggerReadyTemplate: View {
 
 struct LoggerReadyTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerReadyTemplate()
+        LoggerReadyTemplate(isActive: true, title: "title")
     }
 }

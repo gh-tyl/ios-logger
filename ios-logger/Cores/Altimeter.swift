@@ -16,6 +16,7 @@ class AltimeterManager: NSObject, ObservableObject {
     override init() {
         super.init()
         altimeter = CMAltimeter()
+        startAtomosphericPressureUpdate()
     }
 
 //    絶対高度
@@ -63,6 +64,7 @@ class AltimeterManager: NSObject, ObservableObject {
                 if error == nil {
                     let pressure: NSNumber = data!.pressure
                     self.pressureString = String(pressure.floatValue)
+                    print("inside func pressureString: \(self.pressureString)")
                     self.willChange.send()
                 }
             })

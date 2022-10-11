@@ -2,19 +2,17 @@ import SwiftUI
 
 struct LoggerDataPage: View {
     @Binding var state: LoggerContentState
-
-    @EnvironmentObject var envData: EnvironmentData
-    var isActive: Bool = true
-    var title: String = "Data"
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+    @StateObject private var vm = LoggerDataVM()
 
     var body: some View {
-        LoggerDataTemplate(state: $state)
+        LoggerDataTemplate(state: $state, isActive: vm.isActive, title: vm.title)
     }
 }
 
 struct LoggerDataPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerDataPage(state: .constant(.data))
-            .environmentObject(LoggerItemModelData())
+            .environmentObject(LoggerItemsModel())
     }
 }

@@ -1,20 +1,20 @@
 import SwiftUI
 
-struct LoggerListItemsOrganism: View {
+struct LoggerDataListOrganism: View {
     @EnvironmentObject var loggerItemsModel: LoggerItemsModel
 
     var body: some View {
         VStack {
             ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
-                LoggerItemMolecule(loggerItemModel: item)
+                LoggerDataOrganism(loggerItemModel: item)
             }
         }
     }
 }
 
-struct LoggerListItemsOrganism_Previews: PreviewProvider {
+struct LoggerDataListOrganism_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerListItemsOrganism()
+        LoggerDataListOrganism()
             .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }

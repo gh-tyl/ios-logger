@@ -3,7 +3,7 @@ import SwiftUI
 struct DataMetaTemplate: View {
     @Binding var state: DataContentState
 
-    @EnvironmentObject var loggerItemModelData: LoggerItemModelData
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     var title: String
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct DataMetaTemplate: View {
 struct DataMetaTemplate_Previews: PreviewProvider {
     static var previews: some View {
         DataMetaTemplate(state: .constant(.meta), title: "title")
-            .environmentObject(LoggerItemModelData())
+            .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }
 }

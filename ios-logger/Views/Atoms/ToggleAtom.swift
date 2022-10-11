@@ -1,33 +1,50 @@
 import SwiftUI
 
 struct ToggleAtom: View {
-    @EnvironmentObject var loggerItemModelData: LoggerItemModelData
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @State var loggerItemModel: LoggerItemModel
-    @State private var isSet: Bool = false
 
-    var loggerItemIndex: Int {
-        loggerItemModelData.LoggerItems.firstIndex(where: {$0.id == loggerItemModel.id})!
+//    @Binding var isSet: Bool
+    @State var isSet: Bool = false
+
+    var sensorItemIndex: Int {
+        loggerItemsModel.LoggerItems.firstIndex(where: {$0.id == loggerItemModel.id})!
+    }
+
+    func testPrint() {
+        if isSet {
+            print(loggerItemsModel.LoggerItems[0])
+        }
     }
 
     var body: some View {
-        Toggle("", isOn: $isSet)
-            .onChange(of: isSet, perform: { record in
-                if record {
-                    loggerItemModelData.LoggerItems[loggerItemIndex].isRecord = true
-                } else {
-                    loggerItemModelData.LoggerItems[loggerItemIndex].isRecord = false
-                }
-                print(loggerItemModelData.LoggerItems[loggerItemIndex].itemNameEN, ":", loggerItemModelData.LoggerItems[loggerItemIndex].isRecord)
-            })
-            .labelsHidden()
-            .padding()
+        VStack {
+            Toggle("", isOn: $isSet)
+                .onChange(of: isSet, perform: { record in
+                    if record {
+                        loggerItemsModel.LoggerItems[sensorItemIndex].isRecord = true
+                    } else {
+                        loggerItemsModel.LoggerItems[sensorItemIndex].isRecord = false
+                    }
+                    print(loggerItemsModel.LoggerItems[sensorItemIndex].itemNameEN, ":", loggerItemsModel.LoggerItems[sensorItemIndex].isRecord)
+                })
+                .labelsHidden()
+                .padding()
+//            Toggle("", isOn: $isSet)
+//                .labelsHidden()
+//                .padding()
+            Button {
+                testPrint()
+            } label: {
+                Text("sample")
+            }
+        }
     }
 }
 
-struct ToggleAtom_Previews: PreviewProvider {
-    static var previews: some View {
-        let index: Int = 0
-        ToggleAtom(loggerItemModel: LoggerItemModelData().LoggerItems[index])
-                .previewLayout(.sizeThatFits)
-    }
-}
+//struct ToggleAtom_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ToggleAtom(isSet: .constant(false))
+//                .previewLayout(.sizeThatFits)
+//    }
+//}
