@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct LabelSmallAtom: View {
-//    @State var value: String
     @Binding var value: String
 
     var body: some View {

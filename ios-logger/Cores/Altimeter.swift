@@ -16,10 +16,9 @@ class AltimeterManager: NSObject, ObservableObject {
     override init() {
         super.init()
         altimeter = CMAltimeter()
-        startAtomosphericPressureUpdate()
     }
 
-//    絶対高度
+//    Absolute AltitudeUpdate
     func startAbsoluteAltitudeUpdate() {
         if(CMAltimeter.isAbsoluteAltitudeAvailable()) {
             altimeter!.startAbsoluteAltitudeUpdates(to: OperationQueue.main, withHandler:{
@@ -37,7 +36,7 @@ class AltimeterManager: NSObject, ObservableObject {
     func stopAbsoluteAltitudeUpdate(){
         altimeter?.stopAbsoluteAltitudeUpdates()
     }
-//    相対高度
+//    Relative AltitudeUpdate
     func startRelativeAltitudeUpdate() {
         if(CMAltimeter.isRelativeAltitudeAvailable()) {
             altimeter!.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: {
@@ -56,7 +55,7 @@ class AltimeterManager: NSObject, ObservableObject {
         altimeter?.stopRelativeAltitudeUpdates()
     }
 
-//    気圧
+//    Atomospheric PressureUpdate
     func startAtomosphericPressureUpdate() {
         if(CMAltimeter.isRelativeAltitudeAvailable()) {
             altimeter!.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: {
@@ -64,7 +63,6 @@ class AltimeterManager: NSObject, ObservableObject {
                 if error == nil {
                     let pressure: NSNumber = data!.pressure
                     self.pressureString = String(pressure.floatValue)
-                    print("inside func pressureString: \(self.pressureString)")
                     self.willChange.send()
                 }
             })

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LoggerRecordingTemplate: View {
     @State var state: LoggerContentState = .data
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
 
     var body: some View {
         NavigationStack {

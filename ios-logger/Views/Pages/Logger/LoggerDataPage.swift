@@ -7,6 +7,11 @@ struct LoggerDataPage: View {
 
     var body: some View {
         LoggerDataTemplate(state: $state, isActive: vm.isActive, title: vm.title)
+            .onAppear(perform: {
+                vm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+                vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: true) { _ in vm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+                }
+            })
     }
 }
 

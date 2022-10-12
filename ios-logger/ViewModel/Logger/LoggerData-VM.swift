@@ -6,56 +6,53 @@ extension LoggerDataPage {
     @MainActor class LoggerDataVM: ObservableObject {
         @Published var isActive: Bool = true
         @Published var title: String = "Data"
-    }
-}
 
-extension LoggerDataOrganism {
-    @MainActor class LoggerDataOVM: ObservableObject {
-        @Published var isActive: Bool = true
-        @Published var title: String = "Data"
         @Published var timer: Timer?
-//        @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-//        @Published var loggerItemsModel: LoggerItemsModel
+        @Published var timeInterval: TimeInterval = 3.0
 
         let sbmanager = ScreenBrightnessManager()
-        let apmanager = AltimeterManager()
+        let ammanager = AltimeterManager()
+        let relaltitude = CMAltimeter.isRelativeAltitudeAvailable()
 
         init() {
-//            self.loggerItemsModel = LoggerItemsModel()
-//            self.callFunctions(loggerItemsModel: &self.loggerItemsModel)
             self.title = "Data"
             self.isActive = true
         }
 
-        func callFunctions(loggerItemsModel: inout LoggerItemsModel) {
-            for var loggerItem in loggerItemsModel.LoggerItems {
-                print("loggerItem: \(loggerItem)")
+        func initFunctions(loggerItems: inout Array<LoggerItemModel>) {
+            for var loggerItem in loggerItems {
+                initFunction(loggerItem: &loggerItem)
+            }
+
+            func initFunction(loggerItem: inout LoggerItemModel) {
+                if loggerItem.isRecord == true && loggerItem.configId == "0" {
+                    print("initFunctions: \(loggerItem.itemNameEN)")
+                    sbmanager.startScreenBrightness()
+                }
+
+                if loggerItem.isRecord && loggerItem.configId == "1" {
+                    print("initFunctions: \(loggerItem.itemNameEN)")
+                    ammanager.startAtomosphericPressureUpdate()
+                }
+            }
+        }
+
+        func callFunctions(loggerItems: inout Array<LoggerItemModel>) {
+            for var loggerItem in loggerItems {
                 updateValue(loggerItem: &loggerItem)
             }
         }
 
         func updateValue(loggerItem: inout LoggerItemModel) {
-//            let sbmanager = ScreenBrightnessManager()
-//            let apmanager = AltimeterManager()
-
-            let relaltitude = CMAltimeter.isRelativeAltitudeAvailable()
-
-            print("isRecord: \(loggerItem.isRecord)")
             if loggerItem.isRecord == true && loggerItem.configId == "0" {
-                print("brightnessString: \(sbmanager.brightnessString)")
+                sbmanager.startScreenBrightness()
                 loggerItem.value = sbmanager.brightnessString
-                print("loggerItem: \(loggerItem)")
+                print("\(loggerItem.itemNameEN): \(loggerItem.value)")
             }
 
             if loggerItem.isRecord && loggerItem.configId == "1" {
-                print("relaltitude: \(relaltitude)")
-                print("pressureString: \(apmanager.pressureString)")
-                print("pressureString: \(relaltitude ? apmanager.pressureString: "---")")
-                loggerItem.value = relaltitude ? apmanager.pressureString: "---"
-//                print("pressureString: \(apmanager.pressureString)")
-//                loggerItem.value = apmanager.pressureString
-
+                loggerItem.value = relaltitude ? ammanager.pressureString: "---"
+                print("\(loggerItem.itemNameEN): \(loggerItem.value)")
             }
         }
     }

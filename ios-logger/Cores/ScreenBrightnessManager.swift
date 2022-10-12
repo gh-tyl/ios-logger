@@ -11,7 +11,6 @@ class ScreenBrightnessManager: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        startScreenBrightness()
     }
 
     func startScreenBrightness() {

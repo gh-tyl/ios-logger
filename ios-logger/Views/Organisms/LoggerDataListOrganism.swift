@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct LoggerDataListOrganism: View {
-    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+//    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+    @State var loggerItemsModel: LoggerItemsModel
 
     var body: some View {
         VStack {
             ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
-                LoggerDataOrganism(loggerItemModel: item)
+//                LoggerDataMolecule(loggerItemModel: item)
+                LoggerDataMolecule(loggerItemModel: .constant(item))
             }
         }
     }
@@ -14,8 +16,9 @@ struct LoggerDataListOrganism: View {
 
 struct LoggerDataListOrganism_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerDataListOrganism()
-            .environmentObject(LoggerItemsModel())
+//        LoggerDataListOrganism(loggerItemsModel: .constant(LoggerItemsModel()))
+        LoggerDataListOrganism(loggerItemsModel: LoggerItemsModel())
+//            .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }
 }

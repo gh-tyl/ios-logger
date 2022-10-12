@@ -1,17 +1,12 @@
 import SwiftUI
 import CoreData
 
-//class EnvironmentData: ObservableObject {
-//    @Published var isNavigationActive: Binding<Bool> = Binding<Bool>.constant(false)
-//}
-
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View{
         TabView {
             LoggerPage()
-//                .environmentObject(EnvironmentData())
                 .tabItem {
                 Text("Sensor Logs")
                 Image(systemName: "doc")
