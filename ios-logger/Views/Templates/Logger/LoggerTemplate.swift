@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct LoggerTemplate: View {
-    var isActive: Bool = true
-    var title: String = "Logger"
+    var isActive: Bool
+    var title: String
 
     var body: some View {
         NavigationStack {
@@ -20,14 +20,12 @@ struct LoggerTemplate: View {
                 Spacer()
             }
         }
-        .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LoggerTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerTemplate()
-            .environmentObject(SensorItemModelData())
+        LoggerTemplate(isActive: true, title: "title")
+            .environmentObject(LoggerItemsModel())
     }
 }

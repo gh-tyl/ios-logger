@@ -13,6 +13,6 @@ struct DataMainPage: View {
 struct DataMainPage_Previews: PreviewProvider {
     static var previews: some View {
         DataMainPage(state: .constant(.main))
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemsModel())
     }
 }

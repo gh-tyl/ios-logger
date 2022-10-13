@@ -3,8 +3,8 @@ import SwiftUI
 struct LoggerDataTemplate: View {
     @Binding var state: LoggerContentState
 
-    var isActive: Bool = true
-    var title: String = "Data"
+    var isActive: Bool
+    var title: String
 
     var body: some View {
         NavigationStack {
@@ -13,7 +13,7 @@ struct LoggerDataTemplate: View {
                     title: title
                 )
                 ScrollView {
-                    LoggerListRecordingOrganism()
+                    LoggerDataListOrganism()
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Memo", moveTo: .memo)
@@ -21,14 +21,13 @@ struct LoggerDataTemplate: View {
                 Spacer()
             }
         }
-        .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LoggerDataTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerDataTemplate(state: .constant(.data))
-            .environmentObject(SensorItemModelData())
+        LoggerDataTemplate(state: .constant(.data), isActive: true, title: "title")
+//        LoggerDataTemplate(state: .constant(.data), loggerItemsModel: .constant(LoggerItemsModel()), isActive: true, title: "title")
+            .environmentObject(LoggerItemsModel())
     }
 }

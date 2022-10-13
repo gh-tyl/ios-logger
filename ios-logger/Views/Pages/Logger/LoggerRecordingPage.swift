@@ -6,7 +6,7 @@ enum LoggerContentState {
 }
 
 struct LoggerRecordingPage: View {
-    @EnvironmentObject var envData: EnvironmentData
+//    @EnvironmentObject var envData: EnvironmentData
     @State var state: LoggerContentState = .data
 
     var body: some View {
@@ -17,6 +17,6 @@ struct LoggerRecordingPage: View {
 struct LoggerRecordingPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerRecordingPage(state: .data)
-            .environmentObject(SensorItemModelData())
+            .environmentObject(LoggerItemsModel())
     }
 }

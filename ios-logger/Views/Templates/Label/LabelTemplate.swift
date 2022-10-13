@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct LabelTemplate: View {
-    @EnvironmentObject var sensorItemModelData: SensorItemModelData
-    var title: String = ""
-    var headlineActivity: String = "Activity"
-    var headlineLocation: String = "Location"
+//    @EnvironmentObject var loggerItemsModel: LoggerItemsModel()
+    var isActive: Bool
+    var title: String
+    var headlineActivity: String
+    var headlineLocation: String
 
     var body: some View {
         NavigationStack {
@@ -14,7 +15,7 @@ struct LabelTemplate: View {
                     LabelItemListOrganism(headline: headlineActivity)
                     LabelItemListOrganism(headline: headlineLocation)
                 }
-                ButtonNavigationAtom(content: LabelCreatePage(title: "title", headline: "headline", label: "label"))
+                ButtonNavigationAtom(isActive: isActive, content: LabelCreatePage(title: "title", label: "label"))
             }
         }
     }
@@ -22,8 +23,7 @@ struct LabelTemplate: View {
 
 struct LabelTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LabelTemplate(title: "Label")
-            .environmentObject(SensorItemModelData())
-            .previewLayout(.sizeThatFits)
+        LabelTemplate(isActive: true, title: "title", headlineActivity: "headlineActivity", headlineLocation: "headlineLocation")
+//            .environmentObject(LoggerItemsModel())
     }
 }
