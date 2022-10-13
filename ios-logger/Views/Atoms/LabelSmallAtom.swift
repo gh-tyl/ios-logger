@@ -11,8 +11,8 @@ struct LabelSmallAtom: View {
 
 struct LabelSmallAtom_Previews: PreviewProvider {
     static var previews: some View {
-//        LabelSmallAtom(value: "58%")
-        LabelSmallAtom(value: .constant("58%"))
+//        LabelSmallAtom(value: "60%")
+        LabelSmallAtom(value: .constant("60%"))
             .previewLayout(.sizeThatFits)
     }
 }

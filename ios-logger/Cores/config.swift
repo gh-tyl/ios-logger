@@ -6,7 +6,7 @@ public var loggerConfig: Array<Dictionary<String, Any>> = [
         "itemNameEN": "Screen Brightness",
         "itemNameJA": "輝度",
         "isRecord": false,
-        "value": "50"
+        "value": "0.5"
     ],
     [
         "id": "1",
