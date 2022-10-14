@@ -5,15 +5,16 @@ final class LoggerItemsModel: ObservableObject {
     @Published var LoggerItems: Array<LoggerItemModel> = []
 
     init() {
-        self.LoggerItems = initLoggerItem(loggerConfig: loggerConfig)
+        self.LoggerItems = initLoggerItem(loggerList: loggerList)
     }
 
-    func initLoggerItem(loggerConfig: Array<Dictionary<String, Any>>) -> Array<LoggerItemModel> {
+    func initLoggerItem(loggerList: Array<Dictionary<String, Any>>) -> Array<LoggerItemModel> {
         var LoggerItem: LoggerItemModel
         var LoggerItems: Array<LoggerItemModel> = []
-        for item in loggerConfig {
+        for item in loggerList {
             LoggerItem = LoggerItemModel(
                 configId: item["id"] as! String,
+                configName: item["configName"] as! String,
                 itemNameEN: item["itemNameEN"] as! String,
                 itemNameJA: item["itemNameJA"] as! String,
                 isRecord: item["isRecord"] as! Bool,
@@ -27,6 +28,7 @@ final class LoggerItemsModel: ObservableObject {
 struct LoggerItemModel: Hashable, Codable, Identifiable {
     var id = UUID()
     var configId: String
+    var configName: String
     var itemNameEN: String
     var itemNameJA: String
     var isRecord: Bool

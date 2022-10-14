@@ -10,6 +10,11 @@ struct LoggerDataMolecule: View {
         HStack {
             ItemAtom(loggerItemNameEN: loggerItemModel.itemNameEN)
             LabelSmallAtom(value: $loggerItemModel.value)
+//                .onAppear(perform: {
+//                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
+//                    }
+//                })
+
         }
         .frame(maxWidth: .infinity)
     }
