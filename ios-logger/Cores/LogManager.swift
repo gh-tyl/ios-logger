@@ -1,22 +1,24 @@
 import Foundation
-import CoreMotion
-import SwiftUI
 
 class LogsWriter {
+    var file: FileHandle? = nil
+    // let logElements: Array<String> = []
+    var header: Array<String> = []
 
-    var file: FileHandle?
+    init(logElements: Array<String>) {
+        for logElement in logElements {
+            header.append(logElement)
+        }
+        header.append("\n")
+        print("header: \(header)")
+    }
 
     func open(_ filePath: URL) {
         do {
             FileManager.default.createFile(atPath: filePath.path, contents: nil, attributes: nil)
             let file = try FileHandle(forWritingTo: filePath)
-            var header = ""
-            header += "datetime,"
-            header += "atmospheric_pressure,"
-            header += "abs_altitude,"
-            header += "screen_brightness,"
-            header += "\n"
-            file.write(header.data(using: .utf8)!)
+            let headerString = header.joined(separator: ",")
+            file.write(headerString.data(using: .utf8)!)
             self.file = file
         } catch let error {
             print(error)
@@ -26,18 +28,20 @@ class LogsWriter {
     func write(_ logs: Dictionary<String, String>) {
         guard let file = self.file else { return }
         var text = ""
-        text += "\(String(describing: logs["datetime"])),"
-        text += "\(String(describing: logs["atmospheric_pressure"])),"
-        text += "\(String(describing: logs["abs_altitude"])),"
-        text += "\(String(describing: logs["screen_brightness"])),"
+        for logElement in header {
+            if let value = logs[logElement] {
+                text += value
+            }
+            text += ","
+        }
         text += "\n"
+        print("text: \(text)")
         file.write(text.data(using: .utf8)!)
     }
 
     func close() {
         guard let file = self.file else { return }
         file.closeFile()
-        self.file = nil
     }
 }
 

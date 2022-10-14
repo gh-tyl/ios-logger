@@ -12,6 +12,7 @@ struct LoggerDataTemplate: View {
                 TitleAtom(
                     title: title
                 )
+                LabelTimeAtom()
                 ScrollView {
                     LoggerDataListOrganism()
                 }
