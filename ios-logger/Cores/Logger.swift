@@ -1,4 +1,5 @@
 import Foundation
+import CoreMotion
 
 class LoggerManager: ObservableObject {
     // Set the loggers
@@ -46,7 +47,7 @@ class LoggerManager: ObservableObject {
 
             if loggerItem.isRecord && loggerItem.configId == loggerConfig["AtmosphericPressure"] {
                 ammanager.startAtomosphericPressureUpdate()
-                loggerItem.value = relaltitude ? ammanager.pressureString: nil
+                loggerItem.value = relaltitude ? ammanager.pressureString: "0.0"
             }
             print("loggerItem.itemNameEN: \(loggerItem.value)")
             logs[loggerItem.configName] = loggerItem.value
@@ -80,7 +81,7 @@ class LoggerManager: ObservableObject {
     func stopFunctions(loggerItems: inout Array<LoggerItemModel>) {
         print("stopFunctions")
         for var loggerItem in loggerItems {
-                stopFunction(loggerItem: &loggerItem)
+            stopFunction(loggerItem: &loggerItem)
         }
 
         func stopFunction(loggerItem: inout LoggerItemModel) {
@@ -94,4 +95,5 @@ class LoggerManager: ObservableObject {
         }
         self.logswriter.close()
         print("stopFunctions: end")
+    }
 }
