@@ -2,7 +2,6 @@ import Foundation
 
 class LogsWriter {
     var file: FileHandle? = nil
-    // let logElements: Array<String> = []
     var header: Array<String> = []
 
     init(logElements: Array<String>) {
@@ -10,18 +9,17 @@ class LogsWriter {
             header.append(logElement)
         }
         header.append("\n")
-        print("header: \(header)")
     }
 
     func open(_ filePath: URL) {
         do {
             FileManager.default.createFile(atPath: filePath.path, contents: nil, attributes: nil)
-            let file = try FileHandle(forWritingTo: filePath)
-            let headerString = header.joined(separator: ",")
+            let file: FileHandle = try FileHandle(forWritingTo: filePath)
+            let headerString: String = header.joined(separator: ",")
             file.write(headerString.data(using: .utf8)!)
             self.file = file
         } catch let error {
-            print(error)
+            print("Error: \(error)")
         }
     }
 
@@ -42,6 +40,7 @@ class LogsWriter {
     func close() {
         guard let file = self.file else { return }
         file.closeFile()
+        self.file = nil
     }
 }
 

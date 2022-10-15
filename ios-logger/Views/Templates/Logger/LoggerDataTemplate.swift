@@ -18,9 +18,11 @@ struct LoggerDataTemplate: View {
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Memo", moveTo: .memo)
-                ButtonExecFullAtom(label: "Stop")
+//                ButtonExecFullAtom(label: "Stop")
+                ButtonNavigationAtom(isActive: true, content: LoggerPage())
                 Spacer()
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
