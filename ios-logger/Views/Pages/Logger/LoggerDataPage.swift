@@ -12,6 +12,9 @@ struct LoggerDataPage: View {
                 vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: true) { _ in vm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
                 }
             })
+            .onDisappear(perform: {
+                vm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+            })
     }
 }
 

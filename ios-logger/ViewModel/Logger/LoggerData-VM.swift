@@ -32,9 +32,11 @@ extension LoggerDataPage {
             }
             print("logElements: \(logElements)")
             self.logswriter = LogsWriter(logElements: logElements)
-            let filepaths: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(GetCurrentDatetimeFilename())_Logs.csv")
-            print("filepaths: \(filepaths)")
-            self.logswriter.open(filepaths)
+            let filepath: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(GetCurrentDatetimeFilename())_Logs.csv")
+            // let filepath: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Logs.csv")
+
+            print("filepath: \(filepath)")
+            self.logswriter.open(filepath)
 
             for var loggerItem in loggerItems {
                 initFunction(loggerItem: &loggerItem)
@@ -84,6 +86,7 @@ extension LoggerDataPage {
         }
 
         func stopFunctions(loggerItems: inout Array<LoggerItemModel>) {
+            print("stopFunctions")
             for var loggerItem in loggerItems {
                     stopFunction(loggerItem: &loggerItem)
             }
@@ -98,6 +101,7 @@ extension LoggerDataPage {
                 }
             }
             self.logswriter.close()
+            print("stopFunctions: end")
         }
     }
 }
