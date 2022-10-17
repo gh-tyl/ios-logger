@@ -4,7 +4,6 @@ struct LoggerDataPage: View {
     @Binding var state: LoggerContentState
     @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @StateObject private var vm = LoggerDataVM()
-    @State var lm = LoggerManager()
 
     var body: some View {
         LoggerDataTemplate
@@ -22,7 +21,7 @@ struct LoggerDataPage: View {
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Memo", moveTo: .memo)
-//                ButtonExecFullAtom(function: lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems))
+                ButtonNavigationAtom(content: LoggerPage())
                 Spacer()
             }
         }

@@ -21,20 +21,11 @@ struct LoggerPage: View {
                 ButtonNavigationAtom(
                     content: LoggerReadyPage()
                 )
+                Spacer()
             }
         }
         .navigationBarBackButtonHidden(true)
     }
-
-//    private var LoggerListItemsOrganism: some View {
-//        VStack {
-//            ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
-//                if item.configId != "0" {
-//                    LoggerItemMolecule(loggerItemModel: item)
-//                }
-//            }
-//        }
-//    }
 }
 
 struct LoggerPage_Previews: PreviewProvider {

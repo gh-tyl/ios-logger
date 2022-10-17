@@ -55,12 +55,14 @@ class LoggerManager: ObservableObject {
     }
 
     func callFunctions(loggerItems: inout Array<LoggerItemModel>) {
+        print("callFunctions")
         // Update the loggers
         var logs: Dictionary<String, String> = [:]
         for var loggerItem in loggerItems {
             updateValue(loggerItem: &loggerItem, logs: &logs)
         }
         self.logswriter.write(logs)
+        print("callFunctions end")
 
         func updateValue(loggerItem: inout LoggerItemModel, logs: inout Dictionary<String, String>) {
             if loggerItem.isRecord && loggerItem.configId == loggerConfig["Datetime"] {
@@ -83,6 +85,8 @@ class LoggerManager: ObservableObject {
         for var loggerItem in loggerItems {
             stopFunction(loggerItem: &loggerItem)
         }
+        self.logswriter.close()
+        print("stopFunctions: end")
 
         func stopFunction(loggerItem: inout LoggerItemModel) {
             if loggerItem.isRecord && loggerItem.configId == loggerConfig["ScreenBrightness"] {
@@ -95,7 +99,5 @@ class LoggerManager: ObservableObject {
                 // ammanager = AltimeterManager()
             }
         }
-        self.logswriter.close()
-        print("stopFunctions: end")
     }
 }

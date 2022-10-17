@@ -18,7 +18,7 @@ struct LoggerMemoPage: View {
                 }
                 .frame(maxHeight: .infinity)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Data", moveTo: .data)
-//                ButtonExecFullAtom(function: lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems))
+                ButtonNavigationAtom(content: LoggerPage())
             }
         }
         .navigationBarBackButtonHidden(true)

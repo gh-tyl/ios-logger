@@ -382,8 +382,8 @@
 			children = (
 				3C6E633A28F4B7920023A1CB /* Logger-VM.swift */,
 				3C6E633D28F502510023A1CB /* LoggerReady-VM.swift */,
-				3C6E633F28F507170023A1CB /* LoggerData-VM.swift */,
 				3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */,
+				3C6E633F28F507170023A1CB /* LoggerData-VM.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
