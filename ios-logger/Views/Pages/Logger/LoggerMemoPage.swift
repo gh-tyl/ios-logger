@@ -2,12 +2,26 @@ import SwiftUI
 
 struct LoggerMemoPage: View {
     @Binding var state: LoggerContentState
-
-    var isActive: Bool = true
     var title: String = "Memo"
 
     var body: some View {
-        LoggerMemoTemplate(state: $state)
+        LoggerMemoTemplate
+    }
+
+    private var LoggerMemoTemplate: some View {
+        NavigationStack {
+            VStack {
+                TitleAtom(title: title)
+                VStack{
+                    PickerMenuAtom()
+                    LoggerMemoTimeOrganism()
+                }
+                .frame(maxHeight: .infinity)
+                ButtonSwitchLoggerAtom(state: $state, moveToName: "Data", moveTo: .data)
+                ButtonNavigationAtom(content: LoggerPage())
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

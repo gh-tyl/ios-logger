@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct LabelTemplate: View {
-//    @EnvironmentObject var loggerItemsModel: LoggerItemsModel()
-    var isActive: Bool
     var title: String
     var headlineActivity: String
     var headlineLocation: String
@@ -15,7 +13,7 @@ struct LabelTemplate: View {
                     LabelItemListOrganism(headline: headlineActivity)
                     LabelItemListOrganism(headline: headlineLocation)
                 }
-                ButtonNavigationAtom(isActive: isActive, content: LabelCreatePage(title: "title", label: "label"))
+                ButtonNavigationAtom(content: LabelCreatePage(title: "title", label: "label"))
             }
         }
     }
@@ -23,7 +21,7 @@ struct LabelTemplate: View {
 
 struct LabelTemplate_Previews: PreviewProvider {
     static var previews: some View {
-        LabelTemplate(isActive: true, title: "title", headlineActivity: "headlineActivity", headlineLocation: "headlineLocation")
+        LabelTemplate(title: "title", headlineActivity: "headlineActivity", headlineLocation: "headlineLocation")
 //            .environmentObject(LoggerItemsModel())
     }
 }

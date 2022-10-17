@@ -6,11 +6,35 @@ enum LoggerContentState {
 }
 
 struct LoggerRecordingPage: View {
-//    @EnvironmentObject var envData: EnvironmentData
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @State var state: LoggerContentState = .data
+    @State var lm: LoggerManager = LoggerManager()
+    @StateObject var vm = LoggerRecordingPageVM()
 
     var body: some View {
-        LoggerRecordingTemplate(state: state)
+        LoggerRecordingTemplate
+    }
+
+    private var LoggerRecordingTemplate: some View {
+        NavigationStack {
+            switch state {
+            case .data:
+                LoggerDataPage(state: $state)
+            case .memo:
+                LoggerMemoPage(state: $state)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .onAppear(perform: {
+            lm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+            vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+            }
+        })
+        .onDisappear(perform: {
+            vm.timer?.invalidate()
+            vm.timer = nil
+            lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+        })
     }
 }
 

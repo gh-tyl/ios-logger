@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PickerWheelAtom: View {
     @State var selection: Int = 0
-    let data = ["0", "1", "2", "3", "4"]
+    let data: Array<String>
 
     var body: some View {
         Picker(selection: $selection, label: Text("Picker")) {
@@ -17,6 +17,7 @@ struct PickerWheelAtom: View {
 
 struct PickerWheelAtom_Previews: PreviewProvider {
     static var previews: some View {
-        PickerWheelAtom().previewLayout(.sizeThatFits)
+        PickerWheelAtom(data: ["0", "1", "2", "3", "4"])
+            .previewLayout(.sizeThatFits)
     }
 }

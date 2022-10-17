@@ -1,10 +1,9 @@
 import Foundation
-import CoreMotion
 
-extension LoggerDataPage {
-    @MainActor class LoggerDataVM: ObservableObject {
+extension LoggerRecordingPage {
+    @MainActor class LoggerRecordingPageVM: ObservableObject {
         @Published var isActive: Bool = true
-        @Published var title: String = "Data"
+        @Published var title: String = "Recording"
 
         @Published var timer: Timer?
         @Published var timeInterval: TimeInterval = 3.0

@@ -4,19 +4,38 @@ struct LoggerDataPage: View {
     @Binding var state: LoggerContentState
     @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @StateObject private var vm = LoggerDataVM()
-    @State var lm = LoggerManager()
 
     var body: some View {
-        LoggerDataTemplate(state: $state, isActive: vm.isActive, title: vm.title)
-            .onAppear(perform: {
-                // vm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-                lm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-                vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: true) { _ in lm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+        LoggerDataTemplate
+    }
+
+    private var LoggerDataTemplate: some View {
+        NavigationStack {
+            VStack {
+                TitleAtom(
+                    title: vm.title
+                )
+                LabelTimeAtom()
+                ScrollView {
+                    LoggerDataListOrganism
                 }
-            })
-            .onDisappear(perform: {
-                lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-            })
+                .frame(maxHeight: .infinity, alignment: .top)
+                ButtonSwitchLoggerAtom(state: $state, moveToName: "Memo", moveTo: .memo)
+                ButtonNavigationAtom(content: LoggerPage())
+                Spacer()
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+
+    private var LoggerDataListOrganism: some View {
+        VStack {
+            ForEach(loggerItemsModel.LoggerItems, id: \.id) { loggerItem in
+                if loggerItem.configId != "0" {
+                    LoggerDataMolecule(loggerItemModel: loggerItem)
+                }
+            }
+        }
     }
 }
 

@@ -9,7 +9,7 @@ struct LabelCreateTemplate: View {
             TitleAtom(title: title)
             LabelCreateOrganism()
                 .frame(maxHeight: .infinity)
-            ButtonExecFullAtom(label: label)
+//            ButtonExecFullAtom(function: {})
         }
     }
 }
