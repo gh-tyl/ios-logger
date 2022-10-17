@@ -1,16 +1,14 @@
 import SwiftUI
 
 struct ButtonExecFullAtom: View {
-    @State var label: String
-    @State private var imgName: String = "record.circle"
-    @State private var imgSize: CGFloat = 50.0
+    var function: () -> Void
+    @StateObject var vm: ButtonExecFullAtomVM = ButtonExecFullAtomVM()
 
     var body: some View {
         Button(action: {
-            print("Pushed button")
         }, label: {
-            Image(systemName: imgName)
-                .font(.system(size: imgSize))
+            Image(systemName: vm.imgName)
+                .font(.system(size: vm.imgSize))
                 .padding()
         })
     }
@@ -18,7 +16,7 @@ struct ButtonExecFullAtom: View {
 
 struct ButtonExecFullAtom_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonExecFullAtom(label: "label")
+        ButtonExecFullAtom(function: {})
             .previewLayout(.sizeThatFits)
     }
 }

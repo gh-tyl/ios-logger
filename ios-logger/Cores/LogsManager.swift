@@ -5,6 +5,7 @@ class LogsWriter {
     var header: Array<String> = []
 
     init(logElements: Array<String>) {
+        // Set header
         for logElement in logElements {
             header.append(logElement)
         }

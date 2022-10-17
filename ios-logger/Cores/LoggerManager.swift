@@ -3,8 +3,8 @@ import CoreMotion
 
 class LoggerManager: ObservableObject {
     // Set the loggers
-    let sbmanager = ScreenBrightnessManager()
-    let ammanager = AltimeterManager()
+    var sbmanager = ScreenBrightnessManager()
+    var ammanager = AltimeterManager()
     let relaltitude = CMAltimeter.isRelativeAltitudeAvailable()
     // Set the logswriter
     var logswriter: LogsWriter
@@ -86,11 +86,13 @@ class LoggerManager: ObservableObject {
 
         func stopFunction(loggerItem: inout LoggerItemModel) {
             if loggerItem.isRecord && loggerItem.configId == loggerConfig["ScreenBrightness"] {
-                sbmanager.stopRecord()
+                sbmanager.stopScreenBrightness()
+                // sbmanager = ScreenBrightnessManager()
             }
 
             if loggerItem.isRecord && loggerItem.configId == loggerConfig["AtmosphericPressure"] {
                 ammanager.stopAtomosphericPressureUpdate()
+                // ammanager = AltimeterManager()
             }
         }
         self.logswriter.close()

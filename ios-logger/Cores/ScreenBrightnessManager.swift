@@ -21,6 +21,8 @@ class ScreenBrightnessManager: NSObject, ObservableObject {
         }
     }
 
-    func stopRecord() {
+    func stopScreenBrightness() {
+        self.brightnessString = ""
+        self.willChange.send()
     }
 }

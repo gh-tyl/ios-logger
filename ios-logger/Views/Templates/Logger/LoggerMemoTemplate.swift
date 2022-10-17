@@ -16,7 +16,7 @@ struct LoggerMemoTemplate: View {
                 }
                 .frame(maxHeight: .infinity)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Data", moveTo: .data)
-                ButtonExecFullAtom(label: "Stop")
+                ButtonExecFullAtom(function: {})
                 Spacer()
             }
         }
