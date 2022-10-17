@@ -2,11 +2,13 @@ import SwiftUI
 
 struct ButtonSwitchLoggerAtom: View {
     @Binding var state: LoggerContentState
+    var function: ()
     var moveToName: String
     var moveTo: LoggerContentState
 
     var body: some View {
         Button(moveToName) {
+            function
             state = moveTo
         }
         .frame(maxWidth: .infinity)

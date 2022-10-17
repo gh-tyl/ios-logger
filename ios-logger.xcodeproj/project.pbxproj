@@ -87,6 +87,7 @@
 		3CA9FBE028EB68AE001B08B2 /* LoggerRecordingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9FBDF28EB68AE001B08B2 /* LoggerRecordingPage.swift */; };
 		3CA9FBE228EB737B001B08B2 /* ButtonSwitchLoggerAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9FBE128EB737B001B08B2 /* ButtonSwitchLoggerAtom.swift */; };
 		3CEB3CC128FC756100B5C748 /* ButtonExecFullAtom-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB3CC028FC756100B5C748 /* ButtonExecFullAtom-VM.swift */; };
+		3CF8A60528FCF33B0084F4AB /* LoggerRecording-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,7 @@
 		3CA9FBDF28EB68AE001B08B2 /* LoggerRecordingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerRecordingPage.swift; sourceTree = "<group>"; };
 		3CA9FBE128EB737B001B08B2 /* ButtonSwitchLoggerAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitchLoggerAtom.swift; sourceTree = "<group>"; };
 		3CEB3CC028FC756100B5C748 /* ButtonExecFullAtom-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonExecFullAtom-VM.swift"; sourceTree = "<group>"; };
+		3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggerRecording-VM.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +415,7 @@
 				3C6E633D28F502510023A1CB /* LoggerReady-VM.swift */,
 				3C6E633F28F507170023A1CB /* LoggerData-VM.swift */,
 				3C3BEB8C28F70AD50020AE58 /* LoggerDataOrganism-VM.swift */,
+				3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -473,8 +476,8 @@
 				3C35BD4728E001B2001795A1 /* Views */,
 				3C35BD4B28E00227001795A1 /* Utils */,
 				3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */,
-				3C8BA6DC28D6678500ADE7DB /* Assets.xcassets */,
 				3C8BA6E128D6678500ADE7DB /* Persistence.swift */,
+				3C8BA6DC28D6678500ADE7DB /* Assets.xcassets */,
 				3C8BA6E328D6678500ADE7DB /* ios_logger.xcdatamodeld */,
 				3C8BA6DE28D6678500ADE7DB /* Preview Content */,
 			);
@@ -672,6 +675,7 @@
 				3C0F80CA28E16C9100753CB1 /* LoggerReadyPage.swift in Sources */,
 				3C1C526D28E50843002982BE /* PickerMenuAtom.swift in Sources */,
 				3C0F80BA28E134B300753CB1 /* PickerWheelAtom.swift in Sources */,
+				3CF8A60528FCF33B0084F4AB /* LoggerRecording-VM.swift in Sources */,
 				3C8BA6E528D6678500ADE7DB /* ios_logger.xcdatamodeld in Sources */,
 				3C1C526A28E4FF49002982BE /* LoggerTimeTriggerMolecule.swift in Sources */,
 				3C0F80B828E1339F00753CB1 /* ItemAtom.swift in Sources */,

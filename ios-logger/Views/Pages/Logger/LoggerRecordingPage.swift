@@ -8,6 +8,8 @@ enum LoggerContentState {
 struct LoggerRecordingPage: View {
 //    @EnvironmentObject var envData: EnvironmentData
     @State var state: LoggerContentState = .data
+    @StateObject var vm = LoggerRecordingPageVM()
+
 
     var body: some View {
         LoggerRecordingTemplate(state: state)

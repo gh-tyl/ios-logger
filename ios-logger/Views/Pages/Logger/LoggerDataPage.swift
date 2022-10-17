@@ -7,16 +7,16 @@ struct LoggerDataPage: View {
     @State var lm = LoggerManager()
 
     var body: some View {
-        LoggerDataTemplate(state: $state, isActive: vm.isActive, title: vm.title)
-            .onAppear(perform: {
-                lm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-                vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-                }
-            })
-            .onDisappear(perform: {
-                lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-//                vm.isRepeat = false
-            })
+        LoggerDataTemplate(state: $state, isActive: vm.isActive, title: vm.title, function: lm)
+//            .onAppear(perform: {
+//                lm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+//                vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+//                }
+//            })
+//            .onDisappear(perform: {
+//                lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+////                vm.isRepeat = false
+//            })
     }
 }
 
