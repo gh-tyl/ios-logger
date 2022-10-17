@@ -15,26 +15,26 @@ struct LoggerPage: View {
                     title: vm.title
                 )
                 ScrollView {
-                    LoggerListItemsOrganism
+                    LoggerListItemsOrganism()
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 ButtonNavigationAtom(
                     content: LoggerReadyPage()
                 )
-                Spacer()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 
-    private var LoggerListItemsOrganism: some View {
-        VStack {
-            ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
-                if item.configId != "0" {
-                    LoggerItemMolecule(loggerItemModel: item)
-                }
-            }
-        }
-    }
+//    private var LoggerListItemsOrganism: some View {
+//        VStack {
+//            ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
+//                if item.configId != "0" {
+//                    LoggerItemMolecule(loggerItemModel: item)
+//                }
+//            }
+//        }
+//    }
 }
 
 struct LoggerPage_Previews: PreviewProvider {

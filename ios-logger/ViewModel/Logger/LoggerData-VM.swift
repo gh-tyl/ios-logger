@@ -1,5 +1,4 @@
 import Foundation
-import CoreData
 import CoreMotion
 
 extension LoggerDataPage {
