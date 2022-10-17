@@ -14,7 +14,7 @@ struct LoggerReadyPage: View {
                     title: vm.title
                 )
                 ScrollView {
-                    LoggerPickersOrganism()
+                    LoggerPickersOrganism
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
             }
@@ -25,6 +25,12 @@ struct LoggerReadyPage: View {
         }
         .navigationTitle(vm.title)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private var LoggerPickersOrganism: some View {
+        ForEach(vm.headlines, id: \.self) { headline in
+            LoggerLabelPickerMolecule(headline: headline, data: vm.data)
+        }
     }
 }
 

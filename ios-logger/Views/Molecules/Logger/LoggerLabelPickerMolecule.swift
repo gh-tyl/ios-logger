@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct LoggerLabelPickerMolecule: View {
-    var headline: String = ""
+    var headline: String
+    var data: Array<String>
 
     var body: some View {
         VStack {
             HeadlineAtom(headline: headline)
-            PickerWheelAtom()
+            PickerWheelAtom(data: data)
         }
     }
 }
@@ -14,7 +15,7 @@ struct LoggerLabelPickerMolecule: View {
 struct LoggerLabelPickerMolecule_Previews: PreviewProvider {
     static var previews: some View {
         LoggerLabelPickerMolecule(
-            headline: "Activity"
+            headline: "Activity", data: ["0", "1", "2", "3", "4"]
         ).previewLayout(.sizeThatFits)
     }
 }
