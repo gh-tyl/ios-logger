@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LoggerDataMolecule: View {
     @EnvironmentObject var loggerItemsModel: LoggerItemsModel
-    @StateObject private var vm = LoggerDataOVM()
+    @StateObject private var vm = LoggerDataMoleculeVM()
     @State var loggerItemModel: LoggerItemModel
 //    @Binding var loggerItemModel: LoggerItemModel
 

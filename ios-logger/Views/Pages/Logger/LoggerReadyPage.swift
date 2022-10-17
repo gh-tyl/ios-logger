@@ -4,7 +4,27 @@ struct LoggerReadyPage: View {
     @StateObject private var vm = LoggerReadyVM()
 
     var body: some View {
-        LoggerReadyTemplate(isActive: vm.isActive, title: vm.title)
+        LoggerReadyTemplate
+    }
+
+    private var LoggerReadyTemplate: some View {
+        NavigationStack {
+            VStack{
+                TitleAtom(
+                    title: vm.title
+                )
+                ScrollView {
+                    LoggerPickersOrganism()
+                }
+                .frame(maxHeight: .infinity, alignment: .top)
+            }
+            ButtonNavigationAtom(
+                content: LoggerRecordingPage()
+            )
+            Spacer()
+        }
+        .navigationTitle(vm.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

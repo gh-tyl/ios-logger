@@ -11,7 +11,6 @@ struct LoggerItemMolecule: View {
         .frame(maxWidth: .infinity)
     }
 }
-
 struct LoggerItemMolecule_Previews: PreviewProvider {
     static var previews: some View {
         let index: Int = 0

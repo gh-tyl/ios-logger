@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct ButtonExecFullAtom: View {
+    @StateObject var vm: ButtonExecFullAtomVM = ButtonExecFullAtomVM()
     var function: ()
 //    var function: LoggerManager
-    @StateObject var vm: ButtonExecFullAtomVM = ButtonExecFullAtomVM()
 
     var body: some View {
         Button(action: {
