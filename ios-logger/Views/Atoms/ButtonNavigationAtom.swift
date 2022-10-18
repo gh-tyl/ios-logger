@@ -2,7 +2,6 @@ import SwiftUI
 
 struct ButtonNavigationAtom<Content: View>: View {
     var content: Content
-//    var function: (() -> Void) = {}
     @State private var imgName: String = "record.circle"
     @State private var imgSize: CGFloat = 50.0
 

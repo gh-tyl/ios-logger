@@ -9,7 +9,8 @@ struct DataMetaTemplate: View {
         VStack {
             TitleAtom(title: title)
             ScrollView {
-                ItemListMolecule()
+                // temporary
+                DataListMolecule()
             }
             ButtonSwitchDataAtom(state: $state, moveToName: "Main", moveTo: .main)
         }
