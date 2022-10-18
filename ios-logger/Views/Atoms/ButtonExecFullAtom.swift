@@ -15,6 +15,13 @@ struct ButtonExecFullAtom: View {
     }
 }
 
+extension ButtonExecFullAtom {
+    @MainActor class ButtonExecFullAtomVM: ObservableObject {
+        @Published var imgName: String = "record.circle"
+        @Published var imgSize: CGFloat = 50.0
+    }
+}
+
 struct ButtonExecFullAtom_Previews: PreviewProvider {
     static var previews: some View {
         ButtonExecFullAtom(function: {})

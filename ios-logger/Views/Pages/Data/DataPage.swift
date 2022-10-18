@@ -9,7 +9,19 @@ struct DataPage: View {
     @State var state: DataContentState = .main
 
     var body: some View {
-        DataTemplate(state: state)
+        DataTemplate
+    }
+
+    private var DataTemplate: some View {
+        NavigationStack {
+            switch state {
+            case .main:
+                DataMainPage(state: $state)
+            case .meta:
+                DataMetaPage(state: $state)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

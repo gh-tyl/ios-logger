@@ -6,7 +6,17 @@ struct DataMainPage: View {
     var title: String = "Data"
 
     var body: some View {
-        DataMainTemplate(state: $state, title: title)
+        DataMainTemplate
+    }
+
+    private var DataMainTemplate: some View {
+        VStack {
+            TitleAtom(title: title)
+            ScrollView {
+                ItemListMolecule()
+            }
+            ButtonSwitchDataAtom(state: $state, moveToName: "Memo", moveTo: .meta)
+        }
     }
 }
 
