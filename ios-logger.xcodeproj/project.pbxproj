@@ -55,7 +55,7 @@
 		3C6EBFAF28E6481900D6734F /* LoggerMemoButtonsMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EBFAE28E6481900D6734F /* LoggerMemoButtonsMolecule.swift */; };
 		3C6EBFB128E6495B00D6734F /* LoggerMemoTimeOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EBFB028E6495B00D6734F /* LoggerMemoTimeOrganism.swift */; };
 		3C796CB728EB9F4800E2DA75 /* LabelTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C796CB628EB9F4800E2DA75 /* LabelTemplate.swift */; };
-		3C8460D528EC79E1004AF6B5 /* ItemListMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460D428EC79E1004AF6B5 /* ItemListMolecule.swift */; };
+		3C8460D528EC79E1004AF6B5 /* DataListMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460D428EC79E1004AF6B5 /* DataListMolecule.swift */; };
 		3C8460D728EC7C15004AF6B5 /* LabelItemListOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460D628EC7C15004AF6B5 /* LabelItemListOrganism.swift */; };
 		3C8460D928EC81A8004AF6B5 /* LabelCreateOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460D828EC81A8004AF6B5 /* LabelCreateOrganism.swift */; };
 		3C8460DB28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460DA28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift */; };
@@ -147,7 +147,7 @@
 		3C6EBFAE28E6481900D6734F /* LoggerMemoButtonsMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMemoButtonsMolecule.swift; sourceTree = "<group>"; };
 		3C6EBFB028E6495B00D6734F /* LoggerMemoTimeOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMemoTimeOrganism.swift; sourceTree = "<group>"; };
 		3C796CB628EB9F4800E2DA75 /* LabelTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTemplate.swift; sourceTree = "<group>"; };
-		3C8460D428EC79E1004AF6B5 /* ItemListMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListMolecule.swift; sourceTree = "<group>"; };
+		3C8460D428EC79E1004AF6B5 /* DataListMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListMolecule.swift; sourceTree = "<group>"; };
 		3C8460D628EC7C15004AF6B5 /* LabelItemListOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelItemListOrganism.swift; sourceTree = "<group>"; };
 		3C8460D828EC81A8004AF6B5 /* LabelCreateOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCreateOrganism.swift; sourceTree = "<group>"; };
 		3C8460DA28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWithLabelMolecule.swift; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				3C1C526628E4FD0C002982BE /* Logger */,
-				3C8460D428EC79E1004AF6B5 /* ItemListMolecule.swift */,
+				3C8460D428EC79E1004AF6B5 /* DataListMolecule.swift */,
 				3C8460DA28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift */,
 				3C8460DC28EC838C004AF6B5 /* InputWithLabelMolecule.swift */,
 			);
@@ -659,7 +659,7 @@
 				3C0F80D128E16DB800753CB1 /* LabelsPage.swift in Sources */,
 				3C0F80DD28E17E1900753CB1 /* ScreenBrightnessManager.swift in Sources */,
 				3C0F80CE28E16D5F00753CB1 /* DataPage.swift in Sources */,
-				3C8460D528EC79E1004AF6B5 /* ItemListMolecule.swift in Sources */,
+				3C8460D528EC79E1004AF6B5 /* DataListMolecule.swift in Sources */,
 				3C0F80E328E17EE200753CB1 /* UIActivityModal.swift in Sources */,
 				3C281DE328FA790B0030EB15 /* LoggerManager.swift in Sources */,
 				3C8BA6D928D6678400ADE7DB /* ios_loggerApp.swift in Sources */,

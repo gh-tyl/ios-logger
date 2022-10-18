@@ -13,8 +13,9 @@ struct DataMainPage: View {
         VStack {
             TitleAtom(title: title)
             ScrollView {
-                ItemListMolecule()
+                DataListMolecule()
             }
+            .frame(maxHeight: .infinity)
             ButtonSwitchDataAtom(state: $state, moveToName: "Memo", moveTo: .meta)
         }
     }

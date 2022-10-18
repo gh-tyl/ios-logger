@@ -6,7 +6,8 @@ struct LabelItemListOrganism: View {
     var body: some View {
         VStack {
             HeadlineAtom(headline: headline)
-            ItemListMolecule()
+            // temporary
+            DataListMolecule()
         }
     }
 }
@@ -14,7 +15,6 @@ struct LabelItemListOrganism: View {
 struct LabelItemListOrganism_Previews: PreviewProvider {
     static var previews: some View {
         LabelItemListOrganism(headline: "Activity")
-//            .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }
 }

@@ -1,8 +1,7 @@
 import SwiftUI
 
-struct ItemListMolecule: View {
+struct DataListMolecule: View {
     @State private var sheetIsPresented = false
-//    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @State var filepathlist = File.documentDirectory.filePaths
     @State var filenamelist = File.documentDirectory.fileNames
     @State var content: String = ""
@@ -11,9 +10,6 @@ struct ItemListMolecule: View {
 
     var body: some View {
         VStack {
-            // ForEach(0..<filepathlist.count, id: \.self) { index in
-            //     ItemAtom(loggerItemNameEN: filenamelist[index])
-            // }
             NavigationView {
                 List(selection: $selectedFile) {
                     ForEach(GetLogs(filepaths: filepathlist, filenames: filenamelist), id: \.self) { item in
@@ -62,9 +58,9 @@ struct ItemListMolecule: View {
     }
 }
 
-struct ItemListMolecule_Previews: PreviewProvider {
+struct DataListMolecule_Previews: PreviewProvider {
     static var previews: some View {
-        ItemListMolecule()
+        DataListMolecule()
             .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }
