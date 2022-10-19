@@ -12,7 +12,6 @@ struct LabelSmallAtom: View {
 
 struct LabelSmallAtom_Previews: PreviewProvider {
     static var previews: some View {
-//        LabelSmallAtom(value: "60%")
         LabelSmallAtom(value: .constant("60%"))
             .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)

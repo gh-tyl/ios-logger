@@ -26,14 +26,14 @@ struct LoggerRecordingPage: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear(perform: {
-            lm.initFunctions(loggerItems: &loggerItemsModel.LoggerItems)
-            vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+            lm.initFunctions(loggerItems: loggerItemsModel)
+            vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggerItems: loggerItemsModel)
             }
         })
         .onDisappear(perform: {
             vm.timer?.invalidate()
             vm.timer = nil
-            lm.stopFunctions(loggerItems: &loggerItemsModel.LoggerItems)
+            lm.stopFunctions(loggerItems: loggerItemsModel)
         })
     }
 }
