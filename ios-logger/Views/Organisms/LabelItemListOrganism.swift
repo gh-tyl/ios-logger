@@ -1,20 +1,21 @@
 import SwiftUI
 
 struct LabelItemListOrganism: View {
-    var headline: String
+    var category: String
 
     var body: some View {
         VStack {
-            HeadlineAtom(headline: headline)
-            // temporary
-            DataListMolecule()
+            HeadlineAtom(headline: category)
+            ScrollView {
+                LabelListMolecule(label: category)
+            }
         }
     }
 }
 
 struct LabelItemListOrganism_Previews: PreviewProvider {
     static var previews: some View {
-        LabelItemListOrganism(headline: "Activity")
+        LabelItemListOrganism(category: "Activity")
             .previewLayout(.sizeThatFits)
     }
 }

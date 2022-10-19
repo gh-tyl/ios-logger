@@ -11,7 +11,7 @@ struct ContentView: View {
                 // Image(systemName: "doc")
                 Image(systemName: "waveform.path.ecg")
             }
-            LabelsPage().tabItem {
+            LabelPage().tabItem {
                 Text("Label")
                 // Image(systemName: "paperclip")
                  Image(systemName: "square.and.pencil")
