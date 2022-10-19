@@ -5,7 +5,16 @@ struct LabelCreatePage: View {
     var label: String
 
     var body: some View {
-        LabelCreateTemplate(title: title, label: label)
+        LabelCreateTemplate
+    }
+
+    private var LabelCreateTemplate: some View {
+        VStack {
+            TitleAtom(title: title)
+            LabelCreateOrganism()
+                .frame(maxHeight: .infinity)
+//            ButtonExecFullAtom(function: {})
+        }
     }
 }
 

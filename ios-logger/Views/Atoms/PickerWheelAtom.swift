@@ -2,13 +2,13 @@ import SwiftUI
 
 struct PickerWheelAtom: View {
     @State var selection: Int = 0
-    let data: Array<String>
+    let data: Array<LabelModel>
 
     var body: some View {
         Picker(selection: $selection, label: Text("Picker")) {
             ForEach(data, id:\.self) { value in
-                Text("\(value)")
-                    .tag(value)
+                Text("\(value.name)")
+                    .tag(value.name)
             }
         }
         .pickerStyle(.wheel)
@@ -17,7 +17,7 @@ struct PickerWheelAtom: View {
 
 struct PickerWheelAtom_Previews: PreviewProvider {
     static var previews: some View {
-        PickerWheelAtom(data: ["0", "1", "2", "3", "4"])
+        PickerWheelAtom(data: LabelsModel().LabelActivities)
             .previewLayout(.sizeThatFits)
     }
 }

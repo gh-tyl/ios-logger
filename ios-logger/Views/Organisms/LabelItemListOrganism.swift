@@ -7,7 +7,7 @@ struct LabelItemListOrganism: View {
         VStack {
             HeadlineAtom(headline: category)
             ScrollView {
-                LabelListMolecule(label: category)
+                LabelListMolecule(category: category)
             }
         }
     }

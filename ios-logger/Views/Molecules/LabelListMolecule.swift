@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct LabelListMolecule: View {
-    @State var label: String
+    @State var category: String
     @EnvironmentObject var labels: LabelsModel
     private var labelList: Array<LabelModel> {
-        switch label {
+        switch category {
         case "Activity":
             return labels.LabelActivities
         case "Location":
@@ -25,7 +25,7 @@ struct LabelListMolecule: View {
 
 struct LabelListMolecule_Previews: PreviewProvider {
     static var previews: some View {
-        LabelListMolecule(label: "Activity")
+        LabelListMolecule(category: "Activity")
             .environmentObject(LabelsModel())
             .previewLayout(.sizeThatFits)
     }

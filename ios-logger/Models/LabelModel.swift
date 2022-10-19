@@ -12,7 +12,7 @@ final class LabelsModel: ObservableObject {
     func initLabels(labelDict: Dictionary<String, Array<Dictionary<String, String>>>, flag: String) -> Array<LabelModel> {
         var label: LabelModel
         var labels: Array<LabelModel> = []
-        var LabelList = labelDict[flag]
+        let LabelList = labelDict[flag]
         for item in LabelList! {
             label = LabelModel(
                 configId: item["configId"]!,
