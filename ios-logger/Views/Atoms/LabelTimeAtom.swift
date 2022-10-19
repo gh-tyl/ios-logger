@@ -1,16 +1,30 @@
 import SwiftUI
 
 struct LabelTimeAtom: View {
-    @State var currentDatetime = GetCurrentDatetime()
+    @StateObject var vm = LabelTimeAtomVM()
+
     var body: some View {
-        Text(currentDatetime)
+        Text(vm.currentDatetime)
             .frame(maxWidth: .infinity)
             .padding()
             .onAppear(perform: {
-                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
-                    currentDatetime = GetCurrentDatetime()
+                vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) {_ in
+                    vm.currentDatetime = GetCurrentDatetime()
                 }
             })
+            .onDisappear(perform: {
+                vm.timer?.invalidate()
+                vm.timer = nil
+            })
+    }
+}
+
+extension LabelTimeAtom {
+    @MainActor class LabelTimeAtomVM: ObservableObject {
+        @Published var currentDatetime = GetCurrentDatetime()
+        @Published var timer: Timer?
+        @Published var timeInterval: TimeInterval = 1.0
+        @Published var isRepeat: Bool = true
     }
 }
 

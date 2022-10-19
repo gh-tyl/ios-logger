@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LoggerDataMolecule: View {
     @EnvironmentObject var loggerItemsModel: LoggerItemsModel
-    @State var loggerItemModel: LoggerItemModel
+    @Binding var loggerItemModel: LoggerItemModel
 
     var body: some View {
         HStack {
@@ -16,8 +16,7 @@ struct LoggerDataMolecule: View {
 struct LoggerDataMolecule_Previews: PreviewProvider {
     static var previews: some View {
         let index: Int = 0
-        LoggerDataMolecule(loggerItemModel: LoggerItemsModel().LoggerItems[index])
-//        LoggerDataMolecule(loggerItemModel: .constant(LoggerItemsModel().LoggerItems[index]))
+        LoggerDataMolecule(loggerItemModel: .constant(LoggerItemsModel().LoggerItems[index]))
             .previewLayout(.sizeThatFits)
             .environmentObject(LoggerItemsModel())
     }

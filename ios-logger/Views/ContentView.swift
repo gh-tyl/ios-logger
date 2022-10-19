@@ -6,22 +6,23 @@ struct ContentView: View {
 
     var body: some View{
         TabView {
-            LoggerPage()
-                .tabItem {
-                Text("Sensor Logs")
-                Image(systemName: "doc")
+            LoggerPage().tabItem {
+                Text("Logger")
+                // Image(systemName: "doc")
+                Image(systemName: "waveform.path.ecg")
             }
-            LabelsPage().tabItem {
-                Text("Labels")
-                Image(systemName: "paperclip")
+            LabelPage().tabItem {
+                Text("Label")
+                // Image(systemName: "paperclip")
+                 Image(systemName: "square.and.pencil")
             }
             DataPage().tabItem {
                 Text("Data")
                 Image(systemName: "list.dash.header.rectangle")
             }
             SettingsPage().tabItem {
-                Text("Settings")
-                Image(systemName: "list.dash.header.rectangle")
+                Text("Setting")
+                Image(systemName: "gear")
             }
         }
     }

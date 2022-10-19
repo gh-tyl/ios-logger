@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 
 final class LoggerItemsModel: ObservableObject {
     @Published var LoggerItems: Array<LoggerItemModel> = []
