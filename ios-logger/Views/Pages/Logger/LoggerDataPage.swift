@@ -32,9 +32,15 @@ struct LoggerDataPage: View {
         VStack {
             ForEach(loggerItemsModel.LoggerItems, id: \.id) { loggerItem in
                 if loggerItem.configId != "0" {
-                    LoggerDataMolecule(loggerItemModel: loggerItem)
+//                    LoggerDataMolecule(loggerItemModel: loggerItem)
+                    LoggerDataMolecule(loggerItemModel: .constant(loggerItem))
                 }
             }
+//            .onAppear {
+//                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+//                    _ in print("sampleeeeeeee \(loggerItemsModel.LoggerItems[1].value)")
+//                }
+//            }
         }
     }
 }
