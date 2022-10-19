@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LoggerLabelPickerMolecule: View {
     var category: String
+    @Binding var selection: Int
     @EnvironmentObject var labels: LabelsModel
     private var labelList: Array<LabelModel> {
             switch category {
@@ -17,7 +18,7 @@ struct LoggerLabelPickerMolecule: View {
     var body: some View {
         VStack {
             HeadlineAtom(headline: category)
-            PickerWheelAtom(data: labelList)
+            PickerWheelAtom(selection: $selection, data: labelList)
         }
     }
 }
@@ -25,7 +26,7 @@ struct LoggerLabelPickerMolecule: View {
 struct LoggerLabelPickerMolecule_Previews: PreviewProvider {
     static var previews: some View {
         LoggerLabelPickerMolecule(
-            category: "Activity"
+            category: "Activity", selection: .constant(0)
         ).previewLayout(.sizeThatFits)
     }
 }

@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct LabelCreatePage: View {
-    var title: String
-    var label: String
+    var title: String = "create label"
 
     var body: some View {
         LabelCreateTemplate
@@ -20,6 +19,6 @@ struct LabelCreatePage: View {
 
 struct LabelCreatePage_Previews: PreviewProvider {
     static var previews: some View {
-        LabelCreatePage(title: "title", label: "label")
+        LabelCreatePage()
     }
 }

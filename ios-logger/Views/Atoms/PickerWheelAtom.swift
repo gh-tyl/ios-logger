@@ -1,23 +1,25 @@
 import SwiftUI
 
 struct PickerWheelAtom: View {
-    @State var selection: Int = 0
+    @Binding var selection: Int
+    @State var test: Int = 0
     let data: Array<LabelModel>
 
     var body: some View {
-        Picker(selection: $selection, label: Text("Picker")) {
+        Picker(selection: $test, label: Text("Picker")) {
             ForEach(data, id:\.self) { value in
                 Text("\(value.name)")
-                    .tag(value.name)
+                    .tag(value.configId)
             }
         }
         .pickerStyle(.wheel)
+        Text("In Picker: \(test)")
     }
 }
 
 struct PickerWheelAtom_Previews: PreviewProvider {
     static var previews: some View {
-        PickerWheelAtom(data: LabelsModel().LabelActivities)
+        PickerWheelAtom(selection: .constant(0), data: LabelsModel().LabelActivities)
             .previewLayout(.sizeThatFits)
     }
 }
