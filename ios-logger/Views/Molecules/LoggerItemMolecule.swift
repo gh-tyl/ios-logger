@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct LoggerItemMolecule: View {
-    @State var loggerItemModel: LoggerItemModel
+    @State var logger: LoggerModel
 
     var body: some View {
         HStack {
-            ItemAtom(loggerItemNameEN: loggerItemModel.itemNameEN)
-            ToggleLoggerItemModelAtom(loggerItemModel: loggerItemModel, isSet: loggerItemModel.isRecord)
+            ItemAtom(loggerItemNameEN: logger.itemNameEN)
+            ToggleLoggerItemModelAtom(logger: logger, isSet: logger.isRecord)
         }
         .frame(maxWidth: .infinity)
     }
@@ -14,7 +14,7 @@ struct LoggerItemMolecule: View {
 struct LoggerItemMolecule_Previews: PreviewProvider {
     static var previews: some View {
         let index: Int = 0
-        LoggerItemMolecule(loggerItemModel: LoggerItemsModel().LoggerItems[index])
+        LoggerItemMolecule(logger: LoggerModels().Loggers[index])
             .previewLayout(.sizeThatFits)
     }
 }
