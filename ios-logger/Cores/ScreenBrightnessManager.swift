@@ -1,7 +1,6 @@
 import Foundation
 import SwiftUI
 import Combine
-import CoreData
 import CoreMotion
 
 class ScreenBrightnessManager: NSObject, ObservableObject {

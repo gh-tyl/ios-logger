@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct LoggerListItemsOrganism: View {
-    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+    @EnvironmentObject var loggers: LoggerModels
 
     var body: some View {
         VStack {
-            ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
-                if item.configId != "0" && Int(item.configId) ?? 0 < 1000 {
-                    LoggerItemMolecule(loggerItemModel: item)
+            ForEach(loggers.Loggers, id: \.id) { logger in
+                if logger.configId != "0" && Int(logger.configId) ?? 0 < 1000 {
+                    LoggerItemMolecule(logger: logger)
                 }
             }
         }
@@ -17,7 +17,7 @@ struct LoggerListItemsOrganism: View {
 struct LoggerListItemsOrganism_Previews: PreviewProvider {
     static var previews: some View {
         LoggerListItemsOrganism()
-            .environmentObject(LoggerItemsModel())
+            .environmentObject(LoggerModels())
             .previewLayout(.sizeThatFits)
     }
 }

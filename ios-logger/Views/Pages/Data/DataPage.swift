@@ -28,6 +28,6 @@ struct DataPage: View {
 struct DataPage_Previews: PreviewProvider {
     static var previews: some View {
         DataPage(state: .main)
-            .environmentObject(LoggerItemsModel())
+            .environmentObject(LoggerModels())
     }
 }

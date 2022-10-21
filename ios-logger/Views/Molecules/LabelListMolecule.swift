@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LabelListMolecule: View {
     @State var category: String
-    @EnvironmentObject var labels: LabelsModel
+    @EnvironmentObject var labels: LabelModels
     private var labelList: Array<LabelModel> {
         switch category {
         case "Activity":
@@ -17,7 +17,7 @@ struct LabelListMolecule: View {
     var body: some View {
         VStack {
             ForEach(labelList, id: (\.id)) { item in
-                ItemAtom(loggerItemNameEN: item.name)
+                ItemAtom(itemName: item.name)
             }
         }
     }
@@ -26,7 +26,7 @@ struct LabelListMolecule: View {
 struct LabelListMolecule_Previews: PreviewProvider {
     static var previews: some View {
         LabelListMolecule(category: "Activity")
-            .environmentObject(LabelsModel())
+            .environmentObject(LabelModels())
             .previewLayout(.sizeThatFits)
     }
 }

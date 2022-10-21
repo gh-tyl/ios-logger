@@ -9,50 +9,49 @@ public var loggerConfig: Dictionary<String, String> = [
     "Location": "1002",
 ]
 
-// TODO: Change the data structure to Dictionary
-public var loggerList: Array<Dictionary<String, Any>> = [
-    [
-        "id": "0",
+public var loggerDict: Dictionary<String, Dictionary<String, Any>> = [
+    "0": [
+        "configId": "0",
         "configName": "Datetime",
         "itemNameEN": "Datetime",
         "itemNameJA": "日時",
         "isRecord": true,
         "value": "",
     ],
-    [
-        "id": "1",
+    "1": [
+        "configId": "1",
         "configName": "ScreenBrightness",
         "itemNameEN": "Screen Brightness",
         "itemNameJA": "輝度",
         "isRecord": false,
         "value": ""
     ],
-    [
-        "id": "2",
+    "2": [
+        "configId": "2",
         "configName": "AtmosphericPressure",
         "itemNameEN": "Atmospheric Pressure",
         "itemNameJA": "気圧",
         "isRecord": false,
         "value": ""
     ],
-    [
-        "id": "1000",
+    "1000": [
+        "configId": "1000",
         "configName": "Memo",
         "itemNameEN": "Memo",
         "itemNameJA": "メモ",
         "isRecord": false,
         "value": ""
     ],
-    [
-        "id": "1001",
+    "1001": [
+        "configId": "1001",
         "configName": "Activity",
         "itemNameEN": "Activity",
         "itemNameJA": "活動",
         "isRecord": true,
         "value": ""
     ],
-    [
-        "id": "1002",
+    "1002": [
+        "configId": "1002",
         "configName": "Location",
         "itemNameEN": "Location",
         "itemNameJA": "位置",

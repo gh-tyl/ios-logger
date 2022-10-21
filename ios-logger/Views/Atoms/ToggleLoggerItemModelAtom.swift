@@ -1,20 +1,20 @@
 import SwiftUI
 
 struct ToggleLoggerItemModelAtom: View {
-        @EnvironmentObject var loggerItemsModel: LoggerItemsModel
-        @State var loggerItemModel: LoggerItemModel
+        @EnvironmentObject var loggers: LoggerModels
+        @State var logger: LoggerModel
         @State var isSet: Bool
 
-        var loggerItemIndex: Int {
-            loggerItemsModel.LoggerItems.firstIndex(where: {$0.id == loggerItemModel.id})!
+        var loggerIndex: Int {
+            loggers.Loggers.firstIndex(where: {$0.id == logger.id})!
         }
 
         var body: some View {
             VStack {
                 Toggle("", isOn: $isSet)
                     .onChange(of: isSet, perform: { flag in
-                        loggerItemsModel.LoggerItems[loggerItemIndex].isRecord = flag
-                        print(loggerItemsModel.LoggerItems[loggerItemIndex].itemNameEN, ":", loggerItemsModel.LoggerItems[loggerItemIndex].isRecord)
+                        loggers.Loggers[loggerIndex].isRecord = flag
+                        print(loggers.Loggers[loggerIndex].itemNameEN, ":", loggers.Loggers[loggerIndex].isRecord)
                     })
                     .labelsHidden()
                     .padding()
@@ -26,8 +26,8 @@ struct ToggleLoggerItemModelAtom_Previews: PreviewProvider {
     static var previews: some View {
         let index: Int = 0
         ToggleLoggerItemModelAtom(
-            loggerItemModel: LoggerItemsModel().LoggerItems[index],
+            logger: LoggerModels().Loggers[index],
             isSet: true)
-        .environmentObject(LoggerItemsModel())
+        .environmentObject(LoggerModels())
     }
 }

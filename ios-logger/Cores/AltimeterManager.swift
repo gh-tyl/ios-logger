@@ -1,7 +1,5 @@
 import Foundation
-import SwiftUI
 import Combine
-import CoreData
 import CoreMotion
 
 class AltimeterManager: NSObject, ObservableObject {

@@ -18,7 +18,7 @@ struct PickerWheelAtom: View {
 
 struct PickerWheelAtom_Previews: PreviewProvider {
     static var previews: some View {
-        PickerWheelAtom(data: LabelsModel().LabelActivities, selection: .constant(0))
+        PickerWheelAtom(data: LabelModels().LabelActivities, selection: .constant(0))
             .previewLayout(.sizeThatFits)
     }
 }

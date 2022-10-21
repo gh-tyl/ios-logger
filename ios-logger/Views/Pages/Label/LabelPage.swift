@@ -22,6 +22,6 @@ struct LabelPage: View {
 struct LabelPage_Previews: PreviewProvider {
     static var previews: some View {
         LabelPage()
-           .environmentObject(LabelsModel())
+           .environmentObject(LabelModels())
     }
 }

@@ -13,12 +13,12 @@ class LoggerManager: ObservableObject {
         self.logswriter = LogsWriter(logElements: [])
     }
 
-    func initFunctions(loggerItems: LoggerItemsModel) {
+    func initFunctions(loggers: LoggerModels) {
     // Set the logElements for the logswriter
     var logElements: Array<String> = []
-    for loggerItem in loggerItems.LoggerItems {
-        if loggerItem.isRecord {
-            logElements.append(loggerItem.configName)
+    for logger in loggers.Loggers {
+        if logger.isRecord {
+            logElements.append(logger.configName)
         }
     }
     //  Add the element(memo, activity, location) to the logElements
@@ -35,83 +35,83 @@ class LoggerManager: ObservableObject {
     // Init the loggers
     var logs: Dictionary<String, String> = [:]
     // loop with index
-    for (idx, var loggerItem) in loggerItems.LoggerItems.enumerated() {
-        initFunction(idx: idx, loggerItem: &loggerItem, logs: &logs)
+    for (idx, var logger) in loggers.Loggers.enumerated() {
+        initFunction(idx: idx, logger: &logger, logs: &logs)
     }
     self.logswriter.write(logs)
 
-    func initFunction(idx: Int, loggerItem: inout LoggerItemModel, logs: inout Dictionary<String, String>) {
-        if loggerItem.isRecord && loggerItem.configId == loggerConfig["Datetime"] {
+    func initFunction(idx: Int, logger: inout LoggerModel, logs: inout Dictionary<String, String>) {
+        if logger.isRecord && logger.configId == loggerConfig["Datetime"] {
             sbmanager.startScreenBrightness()
-            // loggerItem.value = GetCurrentDatetime()
-            loggerItems.LoggerItems[idx].value = GetCurrentDatetime()
+            // logger.value = GetCurrentDatetime()
+            loggers.Loggers[idx].value = GetCurrentDatetime()
         }
 
-        if loggerItem.isRecord && loggerItem.configId == loggerConfig["ScreenBrightness"] {
+        if logger.isRecord && logger.configId == loggerConfig["ScreenBrightness"] {
             sbmanager.startScreenBrightness()
-            // loggerItem.value = sbmanager.brightnessString
-            loggerItems.LoggerItems[idx].value = sbmanager.brightnessString
+            // logger.value = sbmanager.brightnessString
+            loggers.Loggers[idx].value = sbmanager.brightnessString
         }
 
-        if loggerItem.isRecord && loggerItem.configId == loggerConfig["AtmosphericPressure"] {
+        if logger.isRecord && logger.configId == loggerConfig["AtmosphericPressure"] {
             ammanager.startAtomosphericPressureUpdate()
-            // loggerItem.value = relaltitude ? ammanager.pressureString: "0.0"
-            loggerItems.LoggerItems[idx].value = relaltitude ? ammanager.pressureString: "0.0"
+            // logger.value = relaltitude ? ammanager.pressureString: "0.0"
+            loggers.Loggers[idx].value = relaltitude ? ammanager.pressureString: "0.0"
         }
 
-        print("loggerItem.itemNameEN: \(loggerItem.value)")
-        // logs[loggerItem.configName] = loggerItem.value
-        logs[loggerItems.LoggerItems[idx].configName] = loggerItems.LoggerItems[idx].value
+        print("logger.itemNameEN: \(logger.value)")
+        // logs[logger.configName] = logger.value
+        logs[loggers.Loggers[idx].configName] = loggers.Loggers[idx].value
         }
     }
 
-    func callFunctions(loggerItems: LoggerItemsModel) {
+    func callFunctions(loggers: LoggerModels) {
         print("callFunctions")
         // Update the loggers
         var logs: Dictionary<String, String> = [:]
         // loop with index
-        for (idx, var loggerItem) in loggerItems.LoggerItems.enumerated() {
-            updateValue(idx: idx, loggerItem: &loggerItem, logs: &logs)
+        for (idx, var logger) in loggers.Loggers.enumerated() {
+            updateValue(idx: idx, logger: &logger, logs: &logs)
         }
         // if memo is not empty, add the memo to the logs
         self.logswriter.write(logs)
         print("callFunctions end")
 
-        func updateValue(idx: Int, loggerItem: inout LoggerItemModel, logs: inout Dictionary<String, String>) {
-            if loggerItem.isRecord && loggerItem.configId == loggerConfig["Datetime"] {
-                //  loggerItem.value = GetCurrentDatetime()
-                loggerItems.LoggerItems[idx].value = GetCurrentDatetime()
-            } else if loggerItem.isRecord && loggerItem.configId == loggerConfig["ScreenBrightness"] {
+        func updateValue(idx: Int, logger: inout LoggerModel, logs: inout Dictionary<String, String>) {
+            if logger.isRecord && logger.configId == loggerConfig["Datetime"] {
+                //  logger.value = GetCurrentDatetime()
+                loggers.Loggers[idx].value = GetCurrentDatetime()
+            } else if logger.isRecord && logger.configId == loggerConfig["ScreenBrightness"] {
                 sbmanager.startScreenBrightness()
-                //  loggerItem.value = sbmanager.brightnessString
-                loggerItems.LoggerItems[idx].value = sbmanager.brightnessString
-            } else if loggerItem.isRecord && loggerItem.configId == loggerConfig["AtmosphericPressure"] {
-                //  loggerItem.value = relaltitude ? ammanager.pressureString: "---"
-                loggerItems.LoggerItems[idx].value = relaltitude ? ammanager.pressureString: "---"
+                //  logger.value = sbmanager.brightnessString
+                loggers.Loggers[idx].value = sbmanager.brightnessString
+            } else if logger.isRecord && logger.configId == loggerConfig["AtmosphericPressure"] {
+                //  logger.value = relaltitude ? ammanager.pressureString: "---"
+                loggers.Loggers[idx].value = relaltitude ? ammanager.pressureString: "---"
             }
-            if loggerItem.isRecord {
-                print("\(loggerItem.itemNameEN): \(loggerItem.value)")
-                //  logs[loggerItem.configName] = loggerItem.value
-                logs[loggerItems.LoggerItems[idx].configName] = loggerItems.LoggerItems[idx].value
+            if logger.isRecord {
+                print("\(logger.itemNameEN): \(logger.value)")
+                //  logs[logger.configName] = logger.value
+                logs[loggers.Loggers[idx].configName] = loggers.Loggers[idx].value
             }
         }
     }
 
-    func stopFunctions(loggerItems: LoggerItemsModel) {
+    func stopFunctions(loggers: LoggerModels) {
         print("stopFunctions")
-        for var loggerItem in loggerItems.LoggerItems {
-            stopFunction(loggerItem: &loggerItem)
+        for var logger in loggers.Loggers {
+            stopFunction(logger: &logger)
         }
         self.logswriter.close()
         print("stopFunctions: end")
 
-        func stopFunction(loggerItem: inout LoggerItemModel) {
-            if loggerItem.isRecord && loggerItem.configId == loggerConfig["ScreenBrightness"] {
+        func stopFunction(logger: inout LoggerModel) {
+            if logger.isRecord && logger.configId == loggerConfig["ScreenBrightness"] {
                 sbmanager.stopScreenBrightness()
                 // sbmanager = ScreenBrightnessManager()
             }
 
-            if loggerItem.isRecord && loggerItem.configId == loggerConfig["AtmosphericPressure"] {
+            if logger.isRecord && logger.configId == loggerConfig["AtmosphericPressure"] {
                 ammanager.stopAtomosphericPressureUpdate()
                 // ammanager = AltimeterManager()
             }

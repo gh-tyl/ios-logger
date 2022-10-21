@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct LoggerReadyPage: View {
-    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
-    @EnvironmentObject var labelsModel: LabelsModel
+    @EnvironmentObject var loggers: LoggerModels
+    @EnvironmentObject var labels: LabelModels
     @State var lm: LoggerManager = LoggerManager()
     @StateObject private var vm = LoggerReadyVM()
     @State var selection: Int = 0
@@ -10,11 +10,11 @@ struct LoggerReadyPage: View {
     var body: some View {
         LoggerReadyTemplate
             .onDisappear(perform: {
-                for var logger in loggerItemsModel.LoggerItems {
+                for logger in loggers.Loggers {
                     if logger.configId == loggerConfig["Activity"] {
-                        loggerItemsModel.LoggerItems[loggerItemsModel.LoggerItems.firstIndex(of: logger)!].value = labelsModel.LabelActivities[vm.selectionActivity].name
+                        loggers.Loggers[loggers.Loggers.firstIndex(of: logger)!].value = labels.LabelActivities[vm.selectionActivity].name
                     } else if logger.configId == loggerConfig["Location"] {
-                        loggerItemsModel.LoggerItems[loggerItemsModel.LoggerItems.firstIndex(of: logger)!].value = labelsModel.LabelLocations[vm.selectionLocation].name
+                        loggers.Loggers[loggers.Loggers.firstIndex(of: logger)!].value = labels.LabelLocations[vm.selectionLocation].name
                     }
                 }
             })

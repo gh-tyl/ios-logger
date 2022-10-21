@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LoggerLabelPickerMolecule: View {
-    @EnvironmentObject var labels: LabelsModel
+    @EnvironmentObject var labels: LabelModels
     var category: String
     @Binding var selection: Int
 

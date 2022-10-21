@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct LoggerPage: View {
-    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @StateObject private var vm = LoggerVM()
 
     var body: some View {
@@ -31,6 +30,5 @@ struct LoggerPage: View {
 struct LoggerPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerPage()
-            .environmentObject(LoggerItemsModel())
     }
 }
