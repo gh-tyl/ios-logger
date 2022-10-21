@@ -15,7 +15,7 @@ struct LoggerDataPage: View {
                 TitleAtom(
                     title: vm.title
                 )
-                LabelTimeAtom()
+                // LabelTimeAtom()
                 ScrollView {
                     LoggerDataListOrganism
                 }
@@ -31,9 +31,10 @@ struct LoggerDataPage: View {
     private var LoggerDataListOrganism: some View {
         VStack {
             ForEach(loggerItemsModel.LoggerItems, id: \.id) { loggerItem in
-                if loggerItem.configId != "0" {
-                    LoggerDataMolecule(loggerItemModel: .constant(loggerItem))
-                }
+                // if loggerItem.configId != "0" {
+                //     LoggerDataMolecule(loggerItemModel: .constant(loggerItem))
+                // }
+                LoggerDataMolecule(loggerItemModel: .constant(loggerItem))
             }
         }
     }

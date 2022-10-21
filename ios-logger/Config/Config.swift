@@ -4,6 +4,9 @@ public var loggerConfig: Dictionary<String, String> = [
     "Datetime": "0",
     "ScreenBrightness": "1",
     "AtmosphericPressure": "2",
+    "Memo": "1000",
+    "Activity": "1001",
+    "Location": "1002",
 ]
 
 public var loggerList: Array<Dictionary<String, Any>> = [
@@ -13,7 +16,7 @@ public var loggerList: Array<Dictionary<String, Any>> = [
         "itemNameEN": "Datetime",
         "itemNameJA": "日時",
         "isRecord": true,
-        "value": "2022/10/01",
+        "value": "",
     ],
     [
         "id": "1",
@@ -31,6 +34,30 @@ public var loggerList: Array<Dictionary<String, Any>> = [
         "isRecord": false,
         "value": ""
     ],
+    [
+        "id": "1000",
+        "configName": "Memo",
+        "itemNameEN": "Memo",
+        "itemNameJA": "メモ",
+        "isRecord": false,
+        "value": ""
+    ],
+    [
+        "id": "1001",
+        "configName": "Activity",
+        "itemNameEN": "Activity",
+        "itemNameJA": "活動",
+        "isRecord": true,
+        "value": ""
+    ],
+    [
+        "id": "1002",
+        "configName": "Location",
+        "itemNameEN": "Location",
+        "itemNameJA": "位置",
+        "isRecord": true,
+        "value": ""
+    ]
 ]
 
 public var labelConfig: Dictionary<String, String> = [
@@ -51,20 +78,36 @@ public var labelDict: Dictionary<String, Array<Dictionary<String, String>>> = [
         [
             "configId": "2",
             "name": "work",
+        ],
+        [
+            "configId": "3",
+            "name": "coding",
+        ],
+        [
+            "configId": "4",
+            "name": "reading",
         ]
     ],
     "Location": [
         [
             "configId": "0",
-            "name": "home",
+            "name": "private room",
         ],
         [
             "configId": "1",
-            "name": "office",
+            "name": "half private room",
         ],
         [
             "configId": "2",
-            "name": "school",
+            "name": "class room",
+        ],
+        [
+            "configId": "3",
+            "name": "library",
+        ],
+        [
+            "configId": "4",
+            "name": "office",
         ]
     ]
 ]

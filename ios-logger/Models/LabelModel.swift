@@ -12,7 +12,7 @@ final class LabelsModel: ObservableObject {
     func initLabels(labelDict: Dictionary<String, Array<Dictionary<String, String>>>, flag: String) -> Array<LabelModel> {
         var label: LabelModel
         var labels: Array<LabelModel> = []
-        let LabelList = labelDict[flag]
+        let LabelList: [[String : String]]? = labelDict[flag]
         for item in LabelList! {
             label = LabelModel(
                 configId: item["configId"]!,
@@ -24,7 +24,7 @@ final class LabelsModel: ObservableObject {
 }
 
 struct LabelModel: Hashable, Codable, Identifiable {
-    var id = UUID()
+    var id: UUID = UUID()
     var configId: String
     var name: String
 }
