@@ -9,6 +9,7 @@ public var loggerConfig: Dictionary<String, String> = [
     "Location": "1002",
 ]
 
+// TODO: Change the data structure to Dictionary
 public var loggerList: Array<Dictionary<String, Any>> = [
     [
         "id": "0",
@@ -110,6 +111,13 @@ public var labelDict: Dictionary<String, Array<Dictionary<String, String>>> = [
             "name": "office",
         ]
     ]
+]
+
+public var memoDict: Dictionary<String, String> = [
+    "0": "Comfort break",
+    "1": "Talk with someone",
+    "2": "Stretch",
+    "3": "Take a nap",
 ]
 
 public var langConfig: Dictionary<String, String> = [

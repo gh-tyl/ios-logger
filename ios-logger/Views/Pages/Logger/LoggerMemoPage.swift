@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct LoggerMemoPage: View {
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
     @Binding var state: LoggerContentState
     var title: String = "Memo"
 
