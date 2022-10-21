@@ -1,31 +1,35 @@
 import Foundation
 
-final class LoggerItemsModel: ObservableObject {
-    @Published var LoggerItems: Array<LoggerItemModel> = []
+final class LoggerModels: ObservableObject {
+    @Published var Loggers: Array<LoggerModel> = []
 
     init() {
-        self.LoggerItems = initLoggerItem(loggerList: loggerList)
+        self.Loggers = initLoggerItem(loggerDict: loggerDict)
     }
 
-    func initLoggerItem(loggerList: Array<Dictionary<String, Any>>) -> Array<LoggerItemModel> {
-        var LoggerItem: LoggerItemModel
-        var LoggerItems: Array<LoggerItemModel> = []
-        for item in loggerList {
-            LoggerItem = LoggerItemModel(
-                configId: item["id"] as! String,
-                configName: item["configName"] as! String,
-                itemNameEN: item["itemNameEN"] as! String,
-                itemNameJA: item["itemNameJA"] as! String,
-                isRecord: item["isRecord"] as! Bool,
-                value: item["value"] as! String)
-            LoggerItems.append(LoggerItem)
+    func initLoggerItem(loggerDict: Dictionary<String, Dictionary<String, Any>>) -> Array<LoggerModel> {
+        var logger: LoggerModel
+        var loggers: Array<LoggerModel> = []
+        for (key, value) in loggerDict {
+            logger = LoggerModel(
+                configId: key,
+                configName: value["configName"] as! String,
+                itemNameEN: value["itemNameEN"] as! String,
+                itemNameJA: value["itemNameJA"] as! String,
+                isRecord: value["isRecord"] as! Bool,
+                value: value["value"] as! String)
+            loggers.append(logger)
         }
-        return LoggerItems
+        // Sort by configId as Int
+        loggers.sort { (a, b) -> Bool in
+            return Int(a.configId)! < Int(b.configId)!
+        }
+        return loggers
     }
 }
 
-struct LoggerItemModel: Hashable, Codable, Identifiable {
-    var id = UUID()
+struct LoggerModel: Hashable, Codable, Identifiable {
+    var id: UUID = UUID()
     var configId: String
     var configName: String
     var itemNameEN: String

@@ -13,6 +13,5 @@ struct DataMetaPage: View {
 struct DataMetaPage_Previews: PreviewProvider {
     static var previews: some View {
         DataMetaPage(state: .constant(.main))
-            .environmentObject(LoggerItemsModel())
     }
 }

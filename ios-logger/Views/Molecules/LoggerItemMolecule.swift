@@ -5,7 +5,7 @@ struct LoggerItemMolecule: View {
 
     var body: some View {
         HStack {
-            ItemAtom(loggerItemNameEN: logger.itemNameEN)
+            ItemAtom(itemName: logger.itemNameEN)
             ToggleLoggerItemModelAtom(logger: logger, isSet: logger.isRecord)
         }
         .frame(maxWidth: .infinity)

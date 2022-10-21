@@ -1,6 +1,6 @@
 import Foundation
 
-final class LabelsModel: ObservableObject {
+final class LabelModels: ObservableObject {
     @Published var LabelActivities: Array<LabelModel> = []
     @Published var LabelLocations: Array<LabelModel> = []
 

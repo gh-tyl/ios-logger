@@ -5,7 +5,7 @@ struct LoggerDataMolecule: View {
 
     var body: some View {
         HStack {
-            ItemAtom(loggerItemNameEN: logger.itemNameEN)
+            ItemAtom(itemName: logger.itemNameEN)
             LabelSmallAtom(value: $logger.value)
         }
         .frame(maxWidth: .infinity)

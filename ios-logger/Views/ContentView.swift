@@ -8,13 +8,11 @@ struct ContentView: View {
         TabView {
             LoggerPage().tabItem {
                 Text("Logger")
-                // Image(systemName: "doc")
                 Image(systemName: "waveform.path.ecg")
             }
             LabelPage().tabItem {
                 Text("Label")
-                // Image(systemName: "paperclip")
-                 Image(systemName: "square.and.pencil")
+                Image(systemName: "square.and.pencil")
             }
             DataPage().tabItem {
                 Text("Data")

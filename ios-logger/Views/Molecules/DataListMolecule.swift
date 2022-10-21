@@ -19,7 +19,7 @@ struct DataListMolecule: View {
                             self.content = File(path: item.filepaths).contents ?? ""
                         })
                         } label: {
-                            ItemAtom(loggerItemNameEN: item.filenames)
+                            ItemAtom(itemName: item.filenames)
                         }
                     }
                     .onDelete(perform: self.deleteRow)
@@ -61,7 +61,6 @@ struct DataListMolecule: View {
 struct DataListMolecule_Previews: PreviewProvider {
     static var previews: some View {
         DataListMolecule()
-            .environmentObject(LoggerItemsModel())
             .previewLayout(.sizeThatFits)
     }
 }

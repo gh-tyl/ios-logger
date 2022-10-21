@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LoggerDataPage: View {
     @Binding var state: LoggerContentState
-    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+    @EnvironmentObject var loggers: LoggerModels
     @StateObject private var vm = LoggerDataVM()
 
     var body: some View {
@@ -30,11 +30,8 @@ struct LoggerDataPage: View {
 
     private var LoggerDataListOrganism: some View {
         VStack {
-            ForEach(loggerItemsModel.LoggerItems, id: \.id) { loggerItem in
-                // if loggerItem.configId != "0" {
-                //     LoggerDataMolecule(loggerItemModel: .constant(loggerItem))
-                // }
-                LoggerDataMolecule(loggerItemModel: .constant(loggerItem))
+            ForEach(loggers.Loggers, id: \.id) { loggers in
+                LoggerDataMolecule(logger: .constant(loggers))
             }
         }
     }
@@ -43,6 +40,6 @@ struct LoggerDataPage: View {
 struct LoggerDataPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerDataPage(state: .constant(.data))
-            .environmentObject(LoggerItemsModel())
+            .environmentObject(LoggerModels())
     }
 }

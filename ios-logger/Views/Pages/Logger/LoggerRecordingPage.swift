@@ -6,7 +6,7 @@ enum LoggerContentState {
 }
 
 struct LoggerRecordingPage: View {
-    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+    @EnvironmentObject var loggers: LoggerModels
     @State var state: LoggerContentState = .data
     @State var lm: LoggerManager = LoggerManager()
     @StateObject var vm = LoggerRecordingPageVM()
@@ -26,14 +26,14 @@ struct LoggerRecordingPage: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear(perform: {
-            lm.initFunctions(loggerItems: loggerItemsModel)
-            vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggerItems: loggerItemsModel)
+            lm.initFunctions(loggers: loggers)
+            vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggers: loggers)
             }
         })
         .onDisappear(perform: {
             vm.timer?.invalidate()
             vm.timer = nil
-            lm.stopFunctions(loggerItems: loggerItemsModel)
+            lm.stopFunctions(loggers: loggers)
         })
     }
 }
@@ -41,6 +41,6 @@ struct LoggerRecordingPage: View {
 struct LoggerRecordingPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerRecordingPage(state: .data)
-            .environmentObject(LoggerItemsModel())
+            .environmentObject(LoggerModels())
     }
 }
