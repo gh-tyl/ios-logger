@@ -1,14 +1,22 @@
 import SwiftUI
 
 struct LoggerReadyPage: View {
+    @EnvironmentObject var loggerItemsModel: LoggerItemsModel
+    @EnvironmentObject var labelsModel: LabelsModel
     @State var lm: LoggerManager = LoggerManager()
     @StateObject private var vm = LoggerReadyVM()
+    @State var selection: Int = 0
 
     var body: some View {
         LoggerReadyTemplate
             .onDisappear(perform: {
-                print(vm.selectionActivity)
-                print(vm.selectionLocation)
+                for var logger in loggerItemsModel.LoggerItems {
+                    if logger.configId == loggerConfig["Activity"] {
+                        loggerItemsModel.LoggerItems[loggerItemsModel.LoggerItems.firstIndex(of: logger)!].value = labelsModel.LabelActivities[vm.selectionActivity].name
+                    } else if logger.configId == loggerConfig["Location"] {
+                        loggerItemsModel.LoggerItems[loggerItemsModel.LoggerItems.firstIndex(of: logger)!].value = labelsModel.LabelLocations[vm.selectionLocation].name
+                    }
+                }
             })
     }
 
@@ -20,8 +28,6 @@ struct LoggerReadyPage: View {
                 )
                 LoggerPickersOrganism
                 .frame(maxHeight: .infinity, alignment: .top)
-                Text(String(vm.selectionActivity))
-                Text(String(vm.selectionLocation))
                 ButtonNavigationAtom(
                     content: LoggerRecordingPage()
                 )

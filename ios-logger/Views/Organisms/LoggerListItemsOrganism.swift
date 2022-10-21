@@ -6,7 +6,7 @@ struct LoggerListItemsOrganism: View {
     var body: some View {
         VStack {
             ForEach(loggerItemsModel.LoggerItems, id: \.id) { item in
-                if item.configId != "0" {
+                if item.configId != "0" && Int(item.configId) ?? 0 < 1000 {
                     LoggerItemMolecule(loggerItemModel: item)
                 }
             }

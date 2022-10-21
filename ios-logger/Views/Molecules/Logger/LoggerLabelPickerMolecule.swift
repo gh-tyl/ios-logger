@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct LoggerLabelPickerMolecule: View {
+    @EnvironmentObject var labels: LabelsModel
     var category: String
     @Binding var selection: Int
-    @EnvironmentObject var labels: LabelsModel
+
     private var labelList: Array<LabelModel> {
             switch category {
             case "Activity":
@@ -18,7 +19,7 @@ struct LoggerLabelPickerMolecule: View {
     var body: some View {
         VStack {
             HeadlineAtom(headline: category)
-            PickerWheelAtom(selection: $selection, data: labelList)
+            PickerWheelAtom(data: labelList, selection: $selection)
         }
     }
 }
