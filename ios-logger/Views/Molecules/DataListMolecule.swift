@@ -5,7 +5,6 @@ struct DataListMolecule: View {
     @State var filepathlist = File.documentDirectory.filePaths
     @State var filenamelist = File.documentDirectory.fileNames
     @State var content: String = ""
-
     @State var selectedFile: Set<FileList> = []
 
     var body: some View {
