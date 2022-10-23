@@ -12,10 +12,6 @@ struct LoggerDataPage: View {
     private var LoggerDataTemplate: some View {
         NavigationStack {
             VStack {
-                TitleAtom(
-                    title: vm.title
-                )
-                // LabelTimeAtom()
                 ScrollView {
                     LoggerDataListOrganism
                 }
@@ -24,8 +20,10 @@ struct LoggerDataPage: View {
                 ButtonNavigationAtom(content: LoggerPage())
                 Spacer()
             }
+            .navigationTitle(vm.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
 
     private var LoggerDataListOrganism: some View {

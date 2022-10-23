@@ -11,6 +11,10 @@ struct LoggerRecordingPage: View {
     @State var lm: LoggerManager = LoggerManager()
     @StateObject var vm = LoggerRecordingPageVM()
 
+    init() {
+            UINavigationBar.setAnimationsEnabled(false)
+    }
+
     var body: some View {
         LoggerRecordingTemplate
     }
@@ -40,7 +44,7 @@ struct LoggerRecordingPage: View {
 
 struct LoggerRecordingPage_Previews: PreviewProvider {
     static var previews: some View {
-        LoggerRecordingPage(state: .data)
+        LoggerRecordingPage()
             .environmentObject(LoggerModels())
     }
 }

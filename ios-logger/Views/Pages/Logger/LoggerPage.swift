@@ -10,25 +10,25 @@ struct LoggerPage: View {
     private var LoggerTemplate: some View {
         NavigationStack {
             VStack {
-                TitleAtom(
-                    title: vm.title
-                )
                 ScrollView {
                     LoggerListItemsOrganism()
                 }
-                .frame(maxHeight: .infinity, alignment: .top)
+                .frame(maxHeight: .infinity)
                 ButtonNavigationAtom(
                     content: LoggerReadyPage()
                 )
                 Spacer()
             }
+            .navigationTitle(vm.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct LoggerPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerPage()
+            .environmentObject(LoggerModels())
     }
 }

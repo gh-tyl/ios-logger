@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct LoggerMemoPage: View {
-    @EnvironmentObject var loggers: LoggerModels
     @Binding var state: LoggerContentState
     var title: String = "Memo"
 
@@ -12,7 +11,7 @@ struct LoggerMemoPage: View {
     private var LoggerMemoTemplate: some View {
         NavigationStack {
             VStack {
-                TitleAtom(title: title)
+                // TitleAtom(title: title)
                 VStack{
                     PickerMenuAtom()
                     LoggerMemoTimeOrganism()
@@ -21,13 +20,18 @@ struct LoggerMemoPage: View {
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Data", moveTo: .data)
                 ButtonNavigationAtom(content: LoggerPage())
             }
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct LoggerMemoPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerMemoPage(state: .constant(.memo))
+            .environmentObject(LoggerModels())
+            .environmentObject(LabelModels())
+            .environmentObject(MemoModels())
     }
 }

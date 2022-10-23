@@ -7,7 +7,7 @@ struct LoggerListItemsOrganism: View {
         VStack {
             ForEach(loggers.Loggers, id: \.id) { logger in
                 if logger.configId != "0" && Int(logger.configId) ?? 0 < 1000 {
-                    LoggerItemMolecule(logger: logger)
+                    LoggerItemMolecule(logger: .constant(logger))
                 }
             }
         }

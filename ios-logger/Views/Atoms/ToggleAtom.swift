@@ -1,14 +1,11 @@
 import SwiftUI
 
 struct ToggleAtom: View {
-    @State var isSet: Bool
+    @Binding var isSet: Bool
 
     var body: some View {
         VStack {
             Toggle("", isOn: $isSet)
-                .onChange(of: isSet, perform: { _ in
-                    print(isSet)
-                })
                 .labelsHidden()
                 .padding()
         }
@@ -17,7 +14,7 @@ struct ToggleAtom: View {
 
 struct ToggleAtom_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleAtom(isSet: true)
+        ToggleAtom(isSet: .constant(true))
                 .previewLayout(.sizeThatFits)
     }
 }
