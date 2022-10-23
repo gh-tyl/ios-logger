@@ -23,19 +23,15 @@ struct LoggerReadyPage: View {
     private var LoggerReadyTemplate: some View {
         NavigationStack {
             VStack{
-                TitleAtom(
-                    title: vm.title
-                )
                 LoggerPickersOrganism
-                .frame(maxHeight: .infinity, alignment: .top)
                 ButtonNavigationAtom(
                     content: LoggerRecordingPage()
                 )
                 Spacer()
             }
+            .navigationTitle(vm.title)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(vm.title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 
     private var LoggerPickersOrganism: some View {
@@ -43,11 +39,14 @@ struct LoggerReadyPage: View {
             LoggerLabelPickerMolecule(category: vm.categoryActivity, selection: $vm.selectionActivity)
             LoggerLabelPickerMolecule(category: vm.categoryLocation, selection: $vm.selectionLocation)
         }
+        .frame(maxHeight: .infinity)
     }
 }
 
 struct LoggerReadyPage_Previews: PreviewProvider {
     static var previews: some View {
         LoggerReadyPage()
+            .environmentObject(LoggerModels())
+            .environmentObject(LabelModels())
     }
 }

@@ -20,6 +20,8 @@ struct LoggerLabelPickerMolecule: View {
         VStack {
             HeadlineAtom(headline: category)
             PickerWheelAtom(data: labelList, selection: $selection)
+                .frame(maxHeight: UIScreen.main.bounds.size.height / 4)
+                .clipped()
         }
     }
 }
@@ -28,6 +30,8 @@ struct LoggerLabelPickerMolecule_Previews: PreviewProvider {
     static var previews: some View {
         LoggerLabelPickerMolecule(
             category: "Activity", selection: .constant(0)
-        ).previewLayout(.sizeThatFits)
+        )
+        .environmentObject(LabelModels())
+        .previewLayout(.sizeThatFits)
     }
 }

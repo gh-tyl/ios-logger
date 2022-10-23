@@ -5,7 +5,7 @@ class LoggerManager: ObservableObject {
     // Set the loggers
     var sbmanager = ScreenBrightnessManager()
     var ammanager = AltimeterManager()
-    let relaltitude = CMAltimeter.isRelativeAltitudeAvailable()
+    let relaltitude: Bool = CMAltimeter.isRelativeAltitudeAvailable()
     // Set the logswriter
     var logswriter: LogsWriter
 
