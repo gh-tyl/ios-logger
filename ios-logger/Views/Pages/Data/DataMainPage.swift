@@ -2,8 +2,7 @@ import SwiftUI
 
 struct DataMainPage: View {
     @Binding var state: DataContentState
-
-    var title: String = "Data"
+    @StateObject var vm = DataMainVM()
 
     var body: some View {
         DataMainTemplate
@@ -11,13 +10,15 @@ struct DataMainPage: View {
 
     private var DataMainTemplate: some View {
         VStack {
-            TitleAtom(title: title)
             ScrollView {
                 DataListMolecule()
             }
             .frame(maxHeight: .infinity)
-            ButtonSwitchDataAtom(state: $state, moveToName: "Memo", moveTo: .meta)
+            ButtonSwitchDataAtom(state: $state, moveToName: vm.moveToName, moveTo: vm.moveTo)
         }
+        .navigationTitle(vm.title)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
