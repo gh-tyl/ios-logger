@@ -6,12 +6,14 @@ struct DataMetaPage: View {
 
     var body: some View {
         DataMetaTemplate
+            .toolbar(.hidden)
     }
 
     private var DataMetaTemplate: some View {
         VStack {
             ScrollView {
-                DataListMolecule()
+//                DataListMolecule()
+                Text("DataMeta")
             }
             ButtonSwitchDataAtom(state: $state, moveToName: vm.moveToName, moveTo: vm.moveTo)
         }

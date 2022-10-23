@@ -6,19 +6,49 @@ struct DataMainPage: View {
 
     var body: some View {
         DataMainTemplate
+            .toolbar(.hidden)
+            .sheet(isPresented: $vm.sheetIsPresented) {
+                UIActivityView(fileurls: $vm.selectedFile)
+            }
+            .onAppear(perform: {
+                self.vm.filepathlist = File.documentDirectory.filePaths
+                self.vm.filenamelist = File.documentDirectory.fileNames
+            })
     }
 
     private var DataMainTemplate: some View {
         VStack {
-            ScrollView {
-                DataListMolecule()
-            }
-            .frame(maxHeight: .infinity)
+            DataListOrganism
+                .frame(maxHeight: .infinity)
             ButtonSwitchDataAtom(state: $state, moveToName: vm.moveToName, moveTo: vm.moveTo)
         }
-        .navigationTitle(vm.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
+    }
+
+    private var DataListOrganism: some View {
+        NavigationSplitView {
+            List(selection: $vm.selectedFile) {
+                    ForEach(GetLogs(filepaths: vm.filepathlist, filenames: vm.filenamelist), id: \.self) { item in DataListMolecule(fileName: item.filenames, filePath: item.filepaths)
+                    }
+                    .onDelete(perform: vm.deleteRow)
+                }
+                .navigationTitle(vm.title)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden(true)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        HStack {
+                            Button(action: {
+                                vm.sheetIsPresented = true
+                            }) {
+                                Image(systemName: "square.and.arrow.up")
+                            }
+                            EditButton()
+                        }
+                    }
+                }
+        } detail: {
+            Text(vm.content)
+        }
     }
 }
 
