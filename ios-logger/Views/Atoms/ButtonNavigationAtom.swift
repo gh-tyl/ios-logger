@@ -4,7 +4,7 @@ struct ButtonNavigationAtom<Content: View>: View {
     var content: Content
     @State private var imgName: String = "record.circle"
     @State private var imgSize: CGFloat = 50.0
-    var label: String = "Navigation"
+    var label: String
 
     var body: some View {
         NavigationLink {
@@ -23,7 +23,7 @@ struct ButtonNavigationAtom<Content: View>: View {
 
 struct ButtonNavigationAtom_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonNavigationAtom(content: LoggerPage())
+        ButtonNavigationAtom(content: LoggerPage(), label: "Navigation")
             .previewLayout(.sizeThatFits)
     }
 }

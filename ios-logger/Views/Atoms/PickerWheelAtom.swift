@@ -6,7 +6,7 @@ struct PickerWheelAtom: View {
 
     var body: some View {
         VStack {
-            Picker("Favorite Color", selection: $selection, content: {
+            Picker("Picker LabelModel", selection: $selection, content: {
                 ForEach(0..<data.count, content: { index in
                     Text(data[index].name)
                 })

@@ -25,7 +25,7 @@ struct LoggerReadyPage: View {
             VStack{
                 LoggerPickersOrganism
                 ButtonNavigationAtom(
-                    content: LoggerRecordingPage()
+                    content: LoggerRecordingPage(), label: "Record"
                 )
                 Spacer()
             }
