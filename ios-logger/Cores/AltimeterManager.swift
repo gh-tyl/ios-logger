@@ -64,6 +64,8 @@ class AltimeterManager: NSObject, ObservableObject {
                     self.willChange.send()
                 }
             })
+        } else {
+            print("AtomosphericPressure is unavailable")
         }
     }
     func stopAtomosphericPressureUpdate() {

@@ -4,6 +4,8 @@ public var loggerConfig: Dictionary<String, String> = [
     "Datetime": "0",
     "ScreenBrightness": "1",
     "AtmosphericPressure": "2",
+    "AbsoluteAltitude": "3",
+    "RelativeAltitude": "4",
     "Memo": "1000",
     "Activity": "1001",
     "Location": "1002",
@@ -31,6 +33,22 @@ public var loggerDict: Dictionary<String, Dictionary<String, Any>> = [
         "configName": "AtmosphericPressure",
         "itemNameEN": "Atmospheric Pressure",
         "itemNameJA": "気圧",
+        "isRecord": false,
+        "value": ""
+    ],
+    "3": [
+        "configId": "3",
+        "configName": "AbsoluteAltitude",
+        "itemNameEN": "Absolute Altitude",
+        "itemNameJA": "絶対高度",
+        "isRecord": false,
+        "value": ""
+    ],
+    "4": [
+        "configId": "4",
+        "configName": "RelativeAltitude",
+        "itemNameEN": "Relative Altitude",
+        "itemNameJA": "相対高度",
         "isRecord": false,
         "value": ""
     ],
