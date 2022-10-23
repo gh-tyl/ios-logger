@@ -2,11 +2,24 @@ import SwiftUI
 
 struct DataMetaPage: View {
     @Binding var state: DataContentState
-
-    var title: String = "Data"
+    @StateObject var vm = DataMetaVM()
 
     var body: some View {
-        DataMetaTemplate(state: $state, title: title)
+        DataMetaTemplate
+            .toolbar(.hidden)
+    }
+
+    private var DataMetaTemplate: some View {
+        VStack {
+            ScrollView {
+//                DataListMolecule()
+                Text("DataMeta")
+            }
+            ButtonSwitchDataAtom(state: $state, moveToName: vm.moveToName, moveTo: vm.moveTo)
+        }
+        .navigationTitle(vm.title)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

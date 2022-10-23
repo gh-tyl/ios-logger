@@ -55,8 +55,6 @@
 		3C8460D928EC81A8004AF6B5 /* LabelCreateOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460D828EC81A8004AF6B5 /* LabelCreateOrganism.swift */; };
 		3C8460DB28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460DA28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift */; };
 		3C8460DD28EC838C004AF6B5 /* InputWithLabelMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460DC28EC838C004AF6B5 /* InputWithLabelMolecule.swift */; };
-		3C8460E428EC8AA4004AF6B5 /* DataMetaTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460E328EC8AA4004AF6B5 /* DataMetaTemplate.swift */; };
-		3C8460E728EC8BAF004AF6B5 /* SettingsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460E628EC8BAF004AF6B5 /* SettingsTemplate.swift */; };
 		3C8460E928EC96FD004AF6B5 /* DataMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460E828EC96FD004AF6B5 /* DataMainPage.swift */; };
 		3C8460ED28EC9DD0004AF6B5 /* ButtonSwitchDataAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8460EC28EC9DD0004AF6B5 /* ButtonSwitchDataAtom.swift */; };
 		3C8BA6D928D6678400ADE7DB /* ios_loggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BA6D828D6678400ADE7DB /* ios_loggerApp.swift */; };
@@ -74,6 +72,8 @@
 		3CC33DB328FF3C7F00731ED9 /* LabelPage-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33DB228FF3C7F00731ED9 /* LabelPage-VM.swift */; };
 		3CC33DB528FF3DB800731ED9 /* LabelModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33DB428FF3DB800731ED9 /* LabelModels.swift */; };
 		3CC33DB828FF40FB00731ED9 /* LabelListMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33DB728FF40FB00731ED9 /* LabelListMolecule.swift */; };
+		3CD3F7CA2905B94B003FE23E /* DataMain-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3F7C92905B94B003FE23E /* DataMain-VM.swift */; };
+		3CD3F7CC2905BA80003FE23E /* DataMeta-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3F7CB2905BA80003FE23E /* DataMeta-VM.swift */; };
 		3CF8A60528FCF33B0084F4AB /* LoggerRecording-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,8 +143,6 @@
 		3C8460D828EC81A8004AF6B5 /* LabelCreateOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCreateOrganism.swift; sourceTree = "<group>"; };
 		3C8460DA28EC82CA004AF6B5 /* PickerWithLabelMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWithLabelMolecule.swift; sourceTree = "<group>"; };
 		3C8460DC28EC838C004AF6B5 /* InputWithLabelMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputWithLabelMolecule.swift; sourceTree = "<group>"; };
-		3C8460E328EC8AA4004AF6B5 /* DataMetaTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMetaTemplate.swift; sourceTree = "<group>"; };
-		3C8460E628EC8BAF004AF6B5 /* SettingsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTemplate.swift; sourceTree = "<group>"; };
 		3C8460E828EC96FD004AF6B5 /* DataMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMainPage.swift; sourceTree = "<group>"; };
 		3C8460EC28EC9DD0004AF6B5 /* ButtonSwitchDataAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitchDataAtom.swift; sourceTree = "<group>"; };
 		3C8BA6D528D6678400ADE7DB /* ios-logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +163,8 @@
 		3CC33DB228FF3C7F00731ED9 /* LabelPage-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelPage-VM.swift"; sourceTree = "<group>"; };
 		3CC33DB428FF3DB800731ED9 /* LabelModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelModels.swift; sourceTree = "<group>"; };
 		3CC33DB728FF40FB00731ED9 /* LabelListMolecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListMolecule.swift; sourceTree = "<group>"; };
+		3CD3F7C92905B94B003FE23E /* DataMain-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataMain-VM.swift"; sourceTree = "<group>"; };
+		3CD3F7CB2905BA80003FE23E /* DataMeta-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataMeta-VM.swift"; sourceTree = "<group>"; };
 		3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggerRecording-VM.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,7 +198,6 @@
 			children = (
 				3C8BA6DA28D6678400ADE7DB /* ContentView.swift */,
 				3C35BD5028E002C0001795A1 /* Pages */,
-				3C35BD4E28E002A1001795A1 /* Templates */,
 				3C35BD5128E002C9001795A1 /* Organisms */,
 				3C35BD5228E00305001795A1 /* Molecules */,
 				3C35BD4C28E00286001795A1 /* Atoms */,
@@ -269,15 +268,6 @@
 				3C0F80DE28E17E8C00753CB1 /* OldDataPage.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		3C35BD4E28E002A1001795A1 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				3C8460E028EC8987004AF6B5 /* Data */,
-				3C8460E528EC8B69004AF6B5 /* Settings */,
-			);
-			path = Templates;
 			sourceTree = "<group>";
 		};
 		3C35BD4F28E002B3001795A1 /* Settings */ = {
@@ -352,6 +342,7 @@
 			children = (
 				3C6E633C28F4B7F90023A1CB /* Logger */,
 				3CC33DB128FF3C6800731ED9 /* Label */,
+				3CD3F7C82905B920003FE23E /* Data */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -365,22 +356,6 @@
 				3C6E633F28F507170023A1CB /* LoggerData-VM.swift */,
 			);
 			path = Logger;
-			sourceTree = "<group>";
-		};
-		3C8460E028EC8987004AF6B5 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				3C8460E328EC8AA4004AF6B5 /* DataMetaTemplate.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		3C8460E528EC8B69004AF6B5 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				3C8460E628EC8BAF004AF6B5 /* SettingsTemplate.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		3C8BA6CC28D6678400ADE7DB = {
@@ -460,6 +435,15 @@
 				3C6E633728F21C260023A1CB /* Config.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		3CD3F7C82905B920003FE23E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3CD3F7C92905B94B003FE23E /* DataMain-VM.swift */,
+				3CD3F7CB2905BA80003FE23E /* DataMeta-VM.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,11 +585,11 @@
 				3C8BA6E228D6678500ADE7DB /* Persistence.swift in Sources */,
 				3C6B414F28E4E03900CBCE9A /* InputTextAtom.swift in Sources */,
 				3C6B414D28E4DD2500CBCE9A /* LabelTimeAtom.swift in Sources */,
-				3C8460E428EC8AA4004AF6B5 /* DataMetaTemplate.swift in Sources */,
 				3C6E633828F21C260023A1CB /* Config.swift in Sources */,
 				3C8460D928EC81A8004AF6B5 /* LabelCreateOrganism.swift in Sources */,
 				3C0F80E128E17EB100753CB1 /* FileManager.swift in Sources */,
 				3C6B414428E4C85600CBCE9A /* ButtonAtoms.swift in Sources */,
+				3CD3F7CA2905B94B003FE23E /* DataMain-VM.swift in Sources */,
 				3C6B415728E4E28900CBCE9A /* LoggerMemoPage.swift in Sources */,
 				3C6B414B28E4D04800CBCE9A /* HeadlineAtom.swift in Sources */,
 				3C0F80BC28E1352700753CB1 /* ButtonNavigationAtom.swift in Sources */,
@@ -629,12 +613,12 @@
 				3CA9FBE028EB68AE001B08B2 /* LoggerRecordingPage.swift in Sources */,
 				3C0F80C028E1383400753CB1 /* LoggerLabelPickerMolecule.swift in Sources */,
 				3C0F80C228E1389C00753CB1 /* LoggerItemMolecule.swift in Sources */,
-				3C8460E728EC8BAF004AF6B5 /* SettingsTemplate.swift in Sources */,
 				3C0F80BE28E1366100753CB1 /* LoggerPage.swift in Sources */,
 				3C8460DD28EC838C004AF6B5 /* InputWithLabelMolecule.swift in Sources */,
 				3C0F80DF28E17E8C00753CB1 /* OldDataPage.swift in Sources */,
 				3C0F80C428E155D400753CB1 /* LoggerListItemsOrganism.swift in Sources */,
 				3C8460ED28EC9DD0004AF6B5 /* ButtonSwitchDataAtom.swift in Sources */,
+				3CD3F7CC2905BA80003FE23E /* DataMeta-VM.swift in Sources */,
 				3C0F80D928E17DD000753CB1 /* DateTimeManager.swift in Sources */,
 				3C6B415328E4E11400CBCE9A /* ButtonSmallAtom.swift in Sources */,
 				3C0F80D128E16DB800753CB1 /* LabelPage.swift in Sources */,
