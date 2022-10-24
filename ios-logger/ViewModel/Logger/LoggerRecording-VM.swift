@@ -6,7 +6,7 @@ extension LoggerRecordingPage {
         @Published var title: String = "Recording"
 
         @Published var timer: Timer?
-        @Published var timeInterval: TimeInterval = 3.0
+        @Published var timeInterval: TimeInterval = 15.0
         @Published var isRepeat: Bool = true
     }
 }
