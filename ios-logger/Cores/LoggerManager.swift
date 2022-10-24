@@ -17,14 +17,10 @@ class LoggerManager: ObservableObject {
     // Set the logElements for the logswriter
     var logElements: Array<String> = []
     for logger in loggers.Loggers {
-        if logger.isRecord {
+        if logger.isRecord || logger.configName == "Memo" {
             logElements.append(logger.configName)
         }
     }
-    //  Add the element(memo, activity, location) to the logElements
-    logElements.append("memo")
-    logElements.append("activity")
-    logElements.append("location")
     print("logElements: \(logElements)")
     // Set the logElements for the logswriter
     // Set the logswriter
@@ -59,6 +55,18 @@ class LoggerManager: ObservableObject {
             loggers.Loggers[idx].value = relaltitude ? ammanager.pressureString: "0.0"
         }
 
+        if logger.isRecord && logger.configId == loggerConfig["AbsoluteAltitude"] {
+            ammanager.startAbsoluteAltitudeUpdate()
+            // logger.value = relaltitude ? ammanager.absaltitudeString: "0.0"
+            loggers.Loggers[idx].value = relaltitude ? ammanager.absaltitudeString: "0.0"
+        }
+
+        if logger.isRecord && logger.configId == loggerConfig["RelativeAltitude"] {
+            ammanager.startRelativeAltitudeUpdate()
+            // logger.value = relaltitude ? ammanager.relaltitudeString: "0.0"
+            loggers.Loggers[idx].value = relaltitude ? ammanager.relaltitudeString: "0.0"
+        }
+
         print("logger.itemNameEN: \(logger.value)")
         // logs[logger.configName] = logger.value
         logs[loggers.Loggers[idx].configName] = loggers.Loggers[idx].value
@@ -88,6 +96,15 @@ class LoggerManager: ObservableObject {
             } else if logger.isRecord && logger.configId == loggerConfig["AtmosphericPressure"] {
                 //  logger.value = relaltitude ? ammanager.pressureString: "---"
                 loggers.Loggers[idx].value = relaltitude ? ammanager.pressureString: "---"
+            } else if logger.isRecord && logger.configId == loggerConfig["AbsoluteAltitude"] {
+                //  logger.value = relaltitude ? ammanager.absaltitudeString: "---"
+                loggers.Loggers[idx].value = relaltitude ? ammanager.absaltitudeString: "---"
+            } else if logger.isRecord && logger.configId == loggerConfig["RelativeAltitude"] {
+                //  logger.value = relaltitude ? ammanager.relaltitudeString: "---"
+                loggers.Loggers[idx].value = relaltitude ? ammanager.relaltitudeString: "---"
+            } else if logger.isRecord && logger.configId == loggerConfig["Memo"] {
+                //  logger.value = logger.memo
+                loggers.Loggers[idx].value = logger.value
             }
             if logger.isRecord {
                 print("\(logger.itemNameEN): \(logger.value)")
@@ -99,9 +116,15 @@ class LoggerManager: ObservableObject {
 
     func stopFunctions(loggers: LoggerModels) {
         print("stopFunctions")
-        for var logger in loggers.Loggers {
+        for (idx, var logger) in loggers.Loggers.enumerated() {
             stopFunction(logger: &logger)
+            // if not datetime
+            if logger.configId != loggerConfig["Datetime"] {
+                loggers.Loggers[idx].isRecord = false
+                loggers.Loggers[idx].value = ""
+            }
         }
+
         self.logswriter.close()
         print("stopFunctions: end")
 
@@ -113,6 +136,16 @@ class LoggerManager: ObservableObject {
 
             if logger.isRecord && logger.configId == loggerConfig["AtmosphericPressure"] {
                 ammanager.stopAtomosphericPressureUpdate()
+                // ammanager = AltimeterManager()
+            }
+
+            if logger.isRecord && logger.configId == loggerConfig["AbsoluteAltitude"] {
+                ammanager.stopAbsoluteAltitudeUpdate()
+                // ammanager = AltimeterManager()
+            }
+
+            if logger.isRecord && logger.configId == loggerConfig["RelativeAltitude"] {
+                ammanager.stopRelativeAltitudeUpdate()
                 // ammanager = AltimeterManager()
             }
         }

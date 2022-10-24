@@ -17,7 +17,7 @@ struct LoggerDataPage: View {
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Memo", moveTo: .memo)
-                ButtonNavigationAtom(content: LoggerPage())
+                ButtonNavigationAtom(content: LoggerPage(), label: "Stop")
                 Spacer()
             }
             .navigationTitle(vm.title)

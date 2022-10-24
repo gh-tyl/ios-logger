@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct LoggerMemoPage: View {
+    @EnvironmentObject var memo: MemoModels
     @Binding var state: LoggerContentState
     var title: String = "Memo"
+    @State var selection: Int = 0
 
     var body: some View {
         LoggerMemoTemplate
@@ -11,18 +13,24 @@ struct LoggerMemoPage: View {
     private var LoggerMemoTemplate: some View {
         NavigationStack {
             VStack {
-                // TitleAtom(title: title)
                 VStack{
-                    PickerMenuAtom()
-                    LoggerMemoTimeOrganism()
+                    PickerMenuAtom(selection: $selection)
+                    LoggerMemoTimeOrganism
                 }
                 .frame(maxHeight: .infinity)
                 ButtonSwitchLoggerAtom(state: $state, moveToName: "Data", moveTo: .data)
-                ButtonNavigationAtom(content: LoggerPage())
+                ButtonNavigationAtom(content: LoggerPage(), label: "Stop")
             }
             .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
+        }
+    }
+
+    private var LoggerMemoTimeOrganism: some View {
+        VStack{
+            LabelTimeAtom()
+            LoggerMemoButtonsMolecule()
         }
     }
 }

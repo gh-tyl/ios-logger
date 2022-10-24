@@ -13,7 +13,7 @@ struct LabelPage: View {
                 TitleAtom(title: vm.title)
                 LabelItemListOrganism(category: vm.categoryActivity)
                 LabelItemListOrganism(category: vm.categoryLocation)
-                ButtonNavigationAtom(content: LabelCreatePage())
+                ButtonNavigationAtom(content: LabelCreatePage(), label: "Create Label")
             }
         }
     }

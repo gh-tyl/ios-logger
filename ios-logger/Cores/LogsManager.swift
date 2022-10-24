@@ -30,8 +30,8 @@ class LogsWriter {
         for logElement in header {
             if let value = logs[logElement] {
                 text += value
+                text += ","
             }
-            text += ","
         }
         text += "\n"
         print("text: \(text)")

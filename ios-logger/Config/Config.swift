@@ -4,6 +4,8 @@ public var loggerConfig: Dictionary<String, String> = [
     "Datetime": "0",
     "ScreenBrightness": "1",
     "AtmosphericPressure": "2",
+    "AbsoluteAltitude": "3",
+    "RelativeAltitude": "4",
     "Memo": "1000",
     "Activity": "1001",
     "Location": "1002",
@@ -34,12 +36,28 @@ public var loggerDict: Dictionary<String, Dictionary<String, Any>> = [
         "isRecord": false,
         "value": ""
     ],
+    "3": [
+        "configId": "3",
+        "configName": "AbsoluteAltitude",
+        "itemNameEN": "Absolute Altitude",
+        "itemNameJA": "絶対高度",
+        "isRecord": false,
+        "value": ""
+    ],
+    "4": [
+        "configId": "4",
+        "configName": "RelativeAltitude",
+        "itemNameEN": "Relative Altitude",
+        "itemNameJA": "相対高度",
+        "isRecord": false,
+        "value": ""
+    ],
     "1000": [
         "configId": "1000",
         "configName": "Memo",
         "itemNameEN": "Memo",
         "itemNameJA": "メモ",
-        "isRecord": false,
+        "isRecord": true,
         "value": ""
     ],
     "1001": [
@@ -113,10 +131,11 @@ public var labelDict: Dictionary<String, Array<Dictionary<String, String>>> = [
 ]
 
 public var memoDict: Dictionary<String, String> = [
-    "0": "Comfort break",
-    "1": "Talk with someone",
-    "2": "Stretch",
-    "3": "Take a nap",
+    "0": "",
+    "3": "Stretch",
+    "1": "Comfort break",
+    "2": "Talk with someone",
+    "4": "Take a nap",
 ]
 
 public var langConfig: Dictionary<String, String> = [

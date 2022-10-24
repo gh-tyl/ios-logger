@@ -12,11 +12,22 @@ struct LoggerRecordingPage: View {
     @StateObject var vm = LoggerRecordingPageVM()
 
     init() {
-            UINavigationBar.setAnimationsEnabled(false)
+        UINavigationBar.setAnimationsEnabled(false)
     }
 
     var body: some View {
         LoggerRecordingTemplate
+            .onAppear(perform: {
+                lm.initFunctions(loggers: loggers)
+                vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggers: loggers)
+                }
+            })
+            .onDisappear(perform: {
+                vm.timer?.invalidate()
+                vm.timer = nil
+                lm.stopFunctions(loggers: loggers)
+            })
+
     }
 
     private var LoggerRecordingTemplate: some View {
@@ -29,16 +40,6 @@ struct LoggerRecordingPage: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .onAppear(perform: {
-            lm.initFunctions(loggers: loggers)
-            vm.timer = Timer.scheduledTimer(withTimeInterval: vm.timeInterval, repeats: vm.isRepeat) { _ in lm.callFunctions(loggers: loggers)
-            }
-        })
-        .onDisappear(perform: {
-            vm.timer?.invalidate()
-            vm.timer = nil
-            lm.stopFunctions(loggers: loggers)
-        })
     }
 }
 
