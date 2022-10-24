@@ -102,6 +102,9 @@ class LoggerManager: ObservableObject {
             } else if logger.isRecord && logger.configId == loggerConfig["RelativeAltitude"] {
                 //  logger.value = relaltitude ? ammanager.relaltitudeString: "---"
                 loggers.Loggers[idx].value = relaltitude ? ammanager.relaltitudeString: "---"
+            } else if logger.isRecord && logger.configId == loggerConfig["Memo"] {
+                //  logger.value = logger.memo
+                loggers.Loggers[idx].value = logger.value
             }
             if logger.isRecord {
                 print("\(logger.itemNameEN): \(logger.value)")
