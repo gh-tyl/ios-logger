@@ -74,6 +74,7 @@
 		3CD3F7CA2905B94B003FE23E /* DataMain-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3F7C92905B94B003FE23E /* DataMain-VM.swift */; };
 		3CD3F7CC2905BA80003FE23E /* DataMeta-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3F7CB2905BA80003FE23E /* DataMeta-VM.swift */; };
 		3CD3F7D12905D966003FE23E /* MemoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3F7D02905D966003FE23E /* MemoManager.swift */; };
+		3CD3F7D3290654D0003FE23E /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3F7D2290654D0003FE23E /* WeatherManager.swift */; };
 		3CF8A60528FCF33B0084F4AB /* LoggerRecording-VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		3CD3F7CB2905BA80003FE23E /* DataMeta-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataMeta-VM.swift"; sourceTree = "<group>"; };
 		3CD3F7CF2905D4C8003FE23E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3CD3F7D02905D966003FE23E /* MemoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoManager.swift; sourceTree = "<group>"; };
+		3CD3F7D2290654D0003FE23E /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		3CF8A60428FCF33B0084F4AB /* LoggerRecording-VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggerRecording-VM.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 				3C0F80D828E17DD000753CB1 /* DateTimeManager.swift */,
 				3C0F80D428E17D7900753CB1 /* AltimeterManager.swift */,
 				3C0F80DC28E17E1900753CB1 /* ScreenBrightnessManager.swift */,
+				3CD3F7D2290654D0003FE23E /* WeatherManager.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				3C6B415B28E4E36200CBCE9A /* DataMetaPage.swift in Sources */,
 				3C0F80B428E12FCB00753CB1 /* ToggleAtom.swift in Sources */,
 				3CC33DB528FF3DB800731ED9 /* LabelModels.swift in Sources */,
+				3CD3F7D3290654D0003FE23E /* WeatherManager.swift in Sources */,
 				3CA9FBE228EB737B001B08B2 /* ButtonSwitchLoggerAtom.swift in Sources */,
 				3C0F80D528E17D7900753CB1 /* AltimeterManager.swift in Sources */,
 				3C35BD5728E00980001795A1 /* TitleAtom.swift in Sources */,
