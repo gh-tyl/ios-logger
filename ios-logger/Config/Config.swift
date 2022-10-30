@@ -132,10 +132,12 @@ public var labelDict: Dictionary<String, Array<Dictionary<String, String>>> = [
 
 public var memoDict: Dictionary<String, String> = [
     "0": "",
-    "3": "Stretch",
-    "1": "Comfort break",
-    "2": "Talk with someone",
-    "4": "Take a nap",
+    "1": "Stretch",
+    "2": "Standing",
+    "3": "Moving",
+    "4": "Comfort break",
+    "5": "Talk with someone",
+    "6": "Take a nap",
 ]
 
 public var langConfig: Dictionary<String, String> = [
